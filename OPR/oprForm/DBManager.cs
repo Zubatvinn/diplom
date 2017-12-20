@@ -7,11 +7,6 @@ using System.Windows.Forms;
 
 namespace Data
 {
-	public interface Mapper<T>
-	{
-		T Map(IDataReader reader);
-	}
-
 	public class DBManager
 	{
 		private MySqlConnection connection;
@@ -110,7 +105,6 @@ namespace Data
 				while (reader.Read())
 				{
 					List<Object> row = new List<object>();
-					//res.Add(mapper.Map(reader));
 					for(int i = 0; i < reader.FieldCount; i++)
 					{
 						row.Add(reader[i]);
@@ -142,62 +136,46 @@ namespace Data
 			string res = "Deleted";
 			try
 			{
-				Connect();
 				string sqlCommand = "DELETE FROM " + table + " WHERE " + colName + " = " + colValue + " ";
 				MySqlCommand deleteCmd = new MySqlCommand(sqlCommand, connection);
 				deleteCmd.ExecuteNonQuery();
-				Disconnect();
 			}
 			catch (Exception ex) { res = ex.ToString(); }
 			return res;
 		}
 
-		public string InsertToBD(string table, string list)
+		public int InsertToBD(string table, string list)
 		{
-			string res = "Inserted";
-			try
-			{
-				Connect();
 				string sqlCommand = "INSERT INTO " + table + " VALUES(" + list + ")";
 				MySqlCommand insertCmd = new MySqlCommand(sqlCommand, connection);
-				insertCmd.ExecuteNonQuery();
-				Disconnect();
-			}
-			catch (Exception ex) { res = ex.ToString(); }
-			return res;
+				return (int)insertCmd.ExecuteScalar();
 		}
 
-		public bool InsertToBD(string table, string[] fieldNames, string[] fieldValues)
+		public int InsertToBD(string table, string[] fieldNames, string[] fieldValues)
 		{
 			if (fieldNames.Length == fieldValues.Length)
 			{
-				try
+				string sqlCommand = "INSERT INTO " + table + "(";
+				for (int i = 0; i < fieldNames.Length - 1; i++)
 				{
-					string sqlCommand = "INSERT INTO " + table + "(";
-					for (int i = 0; i < fieldNames.Length - 1; i++)
-					{
-						sqlCommand += " " + fieldNames[i] + ",";
-					}
-					sqlCommand += fieldNames[fieldNames.Length - 1];
-					sqlCommand += ") VALUES(";
-					for (int i = 0; i < fieldValues.Length - 1; i++)
-					{
-						sqlCommand += " " + fieldValues[i] + ",";
-					}
-					sqlCommand += fieldValues[fieldNames.Length - 1];
-					sqlCommand += ")";
-					MySqlCommand insertCmd = new MySqlCommand(sqlCommand, connection);
-					insertCmd.ExecuteNonQuery();
-					return true;
+					sqlCommand += " " + fieldNames[i] + ",";
 				}
-				catch (MySqlException ex)
+				sqlCommand += fieldNames[fieldNames.Length - 1];
+				sqlCommand += ") VALUES(";
+				for (int i = 0; i < fieldValues.Length - 1; i++)
 				{
-					throw new Exception(ex.Message);
+					sqlCommand += " " + fieldValues[i] + ",";
 				}
+				sqlCommand += fieldValues[fieldNames.Length - 1];
+				sqlCommand += ");";
+				sqlCommand += "select last_insert_id();";
+				MySqlCommand insertCmd = new MySqlCommand(sqlCommand, connection);
+				int id = Int32.Parse(insertCmd.ExecuteScalar().ToString());
+				return id;
 			}
 			else
 			{
-				return false;
+				throw new ArgumentException("Field and Value list dont match.");
 			}
 		}
 		//"INSERT INTO " + table + "(" + fieldNames[i] + "
