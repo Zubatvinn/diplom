@@ -35,6 +35,9 @@
 			this.Resource = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.descTB = new System.Windows.Forms.TextBox();
+			this.evNameTB = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.eventListGrid)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -95,11 +98,39 @@
 			this.Value.HeaderText = "Value";
 			this.Value.Name = "Value";
 			// 
+			// descTB
+			// 
+			this.descTB.Location = new System.Drawing.Point(235, 306);
+			this.descTB.Name = "descTB";
+			this.descTB.Size = new System.Drawing.Size(195, 20);
+			this.descTB.TabIndex = 5;
+			this.descTB.Text = "Description";
+			// 
+			// evNameTB
+			// 
+			this.evNameTB.Location = new System.Drawing.Point(129, 306);
+			this.evNameTB.Name = "evNameTB";
+			this.evNameTB.Size = new System.Drawing.Size(100, 20);
+			this.evNameTB.TabIndex = 6;
+			this.evNameTB.Text = "Event Name";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(232, 13);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(72, 13);
+			this.label2.TabIndex = 7;
+			this.label2.Text = "Resource List";
+			// 
 			// PlannedEventsForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(436, 341);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.evNameTB);
+			this.Controls.Add(this.descTB);
 			this.Controls.Add(this.eventListGrid);
 			this.Controls.Add(this.addBtn);
 			this.Controls.Add(this.label1);
@@ -122,5 +153,8 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn Resource;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Description;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Value;
+		private System.Windows.Forms.TextBox descTB;
+		private System.Windows.Forms.TextBox evNameTB;
+		private System.Windows.Forms.Label label2;
 	}
 }

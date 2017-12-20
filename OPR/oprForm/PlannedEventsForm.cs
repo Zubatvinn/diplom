@@ -17,6 +17,8 @@ namespace oprForm
 	{
 		DBManager db = new DBManager();
 		String user = "Vasya";
+		private int valueCol = 2;
+		private int descCol = 1;
 
 		public PlannedEventsForm()
 		{
@@ -26,7 +28,7 @@ namespace oprForm
 		private void PlannedEventsForm_Load(object sender, EventArgs e)
 		{
 			db.Connect();
-			var obj = db.GetRows("actions", "*", "");
+			var obj = db.GetRows("event_template", "*", "");
 			var events = new List<Event>();
 			foreach(var row in obj)
 			{
@@ -45,33 +47,37 @@ namespace oprForm
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			//if (eventsLB.SelectedItem != null)
-			//{
-			//	Event ev = eventsLB.SelectedItem as Event;
-			//	db.Connect();
-			//	string[] values = { ev.id.ToString(), "'"+DateTime.Now.Date.ToString("yyyy-MM-dd HH")+"'", "'value?'",
-			//		"'" + user + "'"};
-			//	string[] fields = { "id_of_action", "date_of_action", "value", "user_name" };
-			//	db.InsertToBD("action_list", fields, values);
-			//}
-			db.Connect();
 			Event ev = eventsLB.SelectedItem as Event;
-			var resourcesForEvent = db.GetRows("resource_of_action", "id_of_action, id_of_resource", "id_of_action=" + ev.id);
-			var resources = new List<Resource>();
-			foreach(var resForEvent in resourcesForEvent)
+
+			db.Connect();
+			int templateId = ev.id;
+			string evName = DBUtil.AddQuotes(evNameTB.Text);
+			string evDesc = DBUtil.AddQuotes(descTB.Text);
+
+			string[] evFields = new string[] { "name", "description", "template_id" };
+			string[] evValues = new string[] {  evName, evDesc, templateId.ToString()};
+
+			int evId = db.InsertToBD("event", evFields, evValues);
+
+			foreach (DataGridViewRow row in eventListGrid.Rows)
 			{
-				var res = db.GetRows("resources", "*", "id_of_resources=" + resForEvent[1]);
-				resources.Add(ResourceMapper.Map(res[0]));
+				Resource res = row.Cells[0].Value as Resource;
+				if (res != null)
+				{
+					string desc = "";
+					string value = "";
+					if (row.Cells[descCol].Value != null)
+						desc = DBUtil.AddQuotes(row.Cells[descCol].Value.ToString());
+					if (row.Cells[valueCol].Value != null)
+						value = row.Cells[valueCol].Value.ToString();
+
+					string[] fields = { "event_id", "resource_id", "value", "description" };
+					string[] values = { evId.ToString(), res.id.ToString(), value, desc };
+
+					db.InsertToBD("event_resource", fields, values);
+				}
 			}
 			db.Disconnect();
-
-			foreach(var r in resources)
-			{
-				var res = new DataGridViewRow();
-				res.SetValues(r, r.description);
-				eventListGrid.Rows.Add(res);
-			}
-
 		}
 
 		private void eventsLB_SelectedIndexChanged(object sender, EventArgs e)
@@ -79,11 +85,12 @@ namespace oprForm
 			// TODO Confirmation if data entered
 			db.Connect();
 			Event ev = eventsLB.SelectedItem as Event;
-			var resourcesForEvent = db.GetRows("resources_of_action", "id_of_action, id_of_resource", "id_of_action=" + ev.id);
+			var resourcesForEvent = db.GetRows("template_resource", "template_id, resource_id",
+				"template_id=" + ev.id);
 			var resources = new List<Resource>();
 			foreach(var resForEvent in resourcesForEvent)
 			{
-				var res = db.GetRows("resources", "*", "id_of_resource=" + resForEvent[1]);
+				var res = db.GetRows("resource", "*", "resource_id=" + resForEvent[1]);
 				resources.Add(ResourceMapper.Map(res[0]));
 			}
 
@@ -101,11 +108,10 @@ namespace oprForm
 			// TODO add on button
 			// Add new resources
 			Resource res = eventListGrid.Rows[e.RowIndex].Cells[0].Value as Resource;
-			Event ev = eventsLB.SelectedItem as Event;
-			db.Connect();
-			string[] fields = { "event_id", "resource_id", "value" };
-			string[] values = { ev.id.ToString(), res.id.ToString(), eventListGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() };
-			db.InsertToBD("event_resources", fields, values);
+			if(e.RowIndex == valueCol)
+				res.value = Int32.Parse(eventListGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+			if(e.RowIndex == descCol)
+				res.description = eventListGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
 		}
 
 	}
@@ -131,7 +137,6 @@ namespace oprForm
 			e.id = Int32.Parse(row[0].ToString());
 			e.name = row[1].ToString();
 			e.description = row[2].ToString();
-			e.actionCol = row[3].ToString();
 
 			return e;
 		}
@@ -155,11 +160,10 @@ namespace oprForm
 		public int id;
 		public string name;
 		public string description;
-		public string actionCol;
 
 		public override string ToString()
 		{
-			return id + " " + name + " " + description + " " + actionCol;
+			return id + " " + name + " " + description;
 		}
 	}
 	class Resource
@@ -167,6 +171,7 @@ namespace oprForm
 		public int id;
 		public string name;
 		public string description;
+		public int value;
 
 		public override string ToString()
 		{
