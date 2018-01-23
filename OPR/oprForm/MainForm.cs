@@ -24,5 +24,18 @@ namespace oprForm
 			child.Show();
 		}
 
-	}
+		private void переглядЗаходiвToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			LookEventsForm child = new LookEventsForm();
+			child.MdiParent = this;
+			child.Show();
+		}
+
+        private void переглядПроблемToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			var child = new IssuesForm();
+			child.MdiParent = this;
+			child.Show();
+        }
+    }
 }
