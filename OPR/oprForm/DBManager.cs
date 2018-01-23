@@ -15,53 +15,23 @@ namespace Data
 		//Nikita
 		public DBManager()
 		{
-			try
-			{
-				connection = new MySqlConnection(connectionString);
-			}
-			catch (MySqlException ex)
-			{
-				throw new Exception(ex.Message);
-			}
+			connection = new MySqlConnection(connectionString);
 		}
 
 		public DBManager(String connectionString)
 		{
-			try
-			{
-				this.connectionString = connectionString;
-				connection = new MySqlConnection(connectionString);
-			}
-			catch (MySqlException ex)
-			{
-				throw new Exception(ex.Message);
-			}
+			this.connectionString = connectionString;
+			connection = new MySqlConnection(connectionString);
 		}
 
-		public bool Connect()
+		public void Connect()
 		{
-			try
-			{
-				connection.Open();
-				return true;
-			}
-			catch (Exception ex)
-			{
-				return false;
-			}
+			connection.Open();
 		}
 
-		public bool Disconnect()
+		public void Disconnect()
 		{
-			try
-			{
-				connection.Close();
-				return true;
-			}
-			catch (Exception ex)
-			{
-				return false;
-			}
+            connection.Close();
 		}
 
 		// Returns single first value according to parameters
@@ -70,11 +40,11 @@ namespace Data
 			//try catch
 			try
 			{
-			MySqlCommand command = new MySqlCommand(getSelectStatement(tableName, fields, cond), connection);
+				MySqlCommand command = new MySqlCommand(getSelectStatement(tableName, fields, cond), connection);
 
-			return command.ExecuteScalar();
+				return command.ExecuteScalar();
 			}
-			catch(MySqlException ex)
+			catch (MySqlException ex)
 			{
 				throw new Exception(ex.Message);
 			}
@@ -105,7 +75,7 @@ namespace Data
 				while (reader.Read())
 				{
 					List<Object> row = new List<object>();
-					for(int i = 0; i < reader.FieldCount; i++)
+					for (int i = 0; i < reader.FieldCount; i++)
 					{
 						row.Add(reader[i]);
 					}
@@ -131,24 +101,19 @@ namespace Data
 
 		/// --IVAN
 
-		public string DeleteFromDB(string table, string colName, string colValue)
+		public void DeleteFromDB(string table, string colName, string colValue)
 		{
-			string res = "Deleted";
-			try
-			{
-				string sqlCommand = "DELETE FROM " + table + " WHERE " + colName + " = " + colValue + " ";
-				MySqlCommand deleteCmd = new MySqlCommand(sqlCommand, connection);
-				deleteCmd.ExecuteNonQuery();
-			}
-			catch (Exception ex) { res = ex.ToString(); }
-			return res;
+			string sqlCommand = "DELETE FROM " + table + " WHERE " + colName + " = " + colValue + " ";
+			MySqlCommand deleteCmd = new MySqlCommand(sqlCommand, connection);
+			deleteCmd.ExecuteNonQuery();
 		}
 
 		public int InsertToBD(string table, string list)
 		{
-				string sqlCommand = "INSERT INTO " + table + " VALUES(" + list + ")";
-				MySqlCommand insertCmd = new MySqlCommand(sqlCommand, connection);
-				return (int)insertCmd.ExecuteScalar();
+			string sqlCommand = "INSERT INTO " + table + " VALUES(" + list + ")";
+			sqlCommand += "select last_insert_id();";
+			MySqlCommand insertCmd = new MySqlCommand(sqlCommand, connection);
+			return Int32.Parse(insertCmd.ExecuteScalar().ToString());
 		}
 
 		public int InsertToBD(string table, string[] fieldNames, string[] fieldValues)
@@ -180,33 +145,24 @@ namespace Data
 		}
 		//"INSERT INTO " + table + "(" + fieldNames[i] + "
 
-		public bool UpdateRecord(string tableName, string[] colNames, string[] colValues)
+		public void UpdateRecord(string tableName, string[] colNames, string[] colValues)
 		{
 			if (colNames.Length == colValues.Length)
 			{
-				try
-				{
-					Connect();
-					string sqlCommand = "UPDATE " + tableName + " SET ";
+				string sqlCommand = "UPDATE " + tableName + " SET ";
 
-					for (int i = 1; i < colValues.Length - 1; i++)
-					{
-						sqlCommand += colNames[i] + "=" + colValues[i] + ", ";
-					}
-					sqlCommand += colNames[colValues.Length - 1] + "=" + colValues[colValues.Length - 1] + "";
-					sqlCommand += " where " + colNames[0] + "=" + colValues[0] + "";
-					MySqlCommand insertCmd = new MySqlCommand(sqlCommand, connection);
-					Disconnect();
-					return true;
-				}
-				catch (Exception ex)
+				for (int i = 1; i < colValues.Length - 1; i++)
 				{
-					return false;
+					sqlCommand += colNames[i] + "=" + colValues[i] + ", ";
 				}
+				sqlCommand += colNames[colValues.Length - 1] + "=" + colValues[colValues.Length - 1] + "";
+				sqlCommand += " where " + colNames[0] + "=" + colValues[0] + "";
+				MySqlCommand insertCmd = new MySqlCommand(sqlCommand, connection);
+                insertCmd.ExecuteNonQuery();
 			}
 			else
 			{
-				return false;
+				throw new ArgumentException("Field and Value list dont match.");
 			}
 		}
 
