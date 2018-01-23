@@ -1,10 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `experts` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `experts`;
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.21, for Win64 (x86_64)
 --
 -- Host: localhost    Database: experts
 -- ------------------------------------------------------
--- Server version	5.5.58
+-- Server version	5.7.21-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -84,11 +82,14 @@ CREATE TABLE `event` (
   `lawyer_vefirication` tinyint(4) DEFAULT NULL,
   `dm_verification` tinyint(4) DEFAULT NULL,
   `id_of_user` int(11) DEFAULT NULL,
+  `issue_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`event_id`),
   KEY `template_id` (`template_id`),
   KEY `userid_fk_idx` (`id_of_user`),
-  CONSTRAINT `userid_fk` FOREIGN KEY (`id_of_user`) REFERENCES `user` (`id_of_user`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `event_ibfk_1` FOREIGN KEY (`template_id`) REFERENCES `event_template` (`template_id`)
+  KEY `issue_id_fk_idx` (`issue_id`),
+  CONSTRAINT `event_ibfk_1` FOREIGN KEY (`template_id`) REFERENCES `event_template` (`template_id`),
+  CONSTRAINT `issue_id_fk` FOREIGN KEY (`issue_id`) REFERENCES `issues` (`issue_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `userid_fk` FOREIGN KEY (`id_of_user`) REFERENCES `user` (`id_of_user`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -98,7 +99,7 @@ CREATE TABLE `event` (
 
 LOCK TABLES `event` WRITE;
 /*!40000 ALTER TABLE `event` DISABLE KEYS */;
-INSERT INTO `event` VALUES (4,'Event Name','Description',1,NULL,NULL,NULL),(5,'Event Name','Description',2,NULL,NULL,NULL),(6,'Event Name','Description',2,NULL,NULL,NULL),(7,'new','Description',1,NULL,NULL,NULL),(8,'Event Name','Description',1,NULL,NULL,NULL),(9,'Event Name','Description',2,NULL,NULL,NULL);
+INSERT INTO `event` VALUES (4,'Event Name','Description',1,NULL,NULL,NULL,NULL),(5,'Event Name','Description',2,NULL,NULL,NULL,NULL),(6,'Event Name','Description',2,NULL,NULL,NULL,NULL),(7,'new','Description',1,NULL,NULL,NULL,NULL),(8,'Event Name','Description',1,NULL,NULL,NULL,NULL),(9,'Event Name','Description',2,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `event` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -267,6 +268,35 @@ INSERT INTO `formulas` VALUES (1,'Q(t)','Розрахунок національ
 UNLOCK TABLES;
 
 --
+-- Table structure for table `issues`
+--
+
+DROP TABLE IF EXISTS `issues`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `issues` (
+  `issue_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `description` varchar(500) DEFAULT NULL,
+  `creation_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `calc_series_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`issue_id`),
+  KEY `calc_series_id` (`calc_series_id`),
+  CONSTRAINT `issues_ibfk_1` FOREIGN KEY (`calc_series_id`) REFERENCES `calculations_description` (`calculation_number`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `issues`
+--
+
+LOCK TABLES `issues` WRITE;
+/*!40000 ALTER TABLE `issues` DISABLE KEYS */;
+INSERT INTO `issues` VALUES (1,'Ploho','qwe','2018-01-23 15:59:30',NULL),(2,'Ochen Ploho','ewq','2018-01-23 15:59:30',NULL),(3,'Хорошо','все будет хорошо','2018-01-23 16:16:25',NULL),(4,'asdasd','asdasd','2018-01-23 16:21:28',NULL);
+/*!40000 ALTER TABLE `issues` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `new_table`
 --
 
@@ -407,4 +437,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-15 14:16:29
+-- Dump completed on 2018-01-23 20:23:08
