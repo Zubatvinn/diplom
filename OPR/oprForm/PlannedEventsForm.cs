@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql.Data;
 using System.Data.Sql;
 using Data;
+using Data.Entity;
 
 namespace oprForm
 {
@@ -32,17 +33,12 @@ namespace oprForm
 			var events = new List<Event>();
 			foreach(var row in obj)
 			{
-				events.Add(EventMapper.Map(row));
+				events.Add(EventTemplateMapper.Map(row));
 			}
 				
 
 			eventsLB.Items.AddRange(events.ToArray());
 			db.Disconnect();
-		}
-
-		private void LoadDataGrid()
-		{
-			//eventListGrid.Columns.
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -105,8 +101,6 @@ namespace oprForm
 
 		private void commitValue(object sender, DataGridViewCellEventArgs e)
 		{
-			// TODO add on button
-			// Add new resources
 			Resource res = eventListGrid.Rows[e.RowIndex].Cells[0].Value as Resource;
 			if(e.RowIndex == valueCol)
 				res.value = Int32.Parse(eventListGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
@@ -114,68 +108,5 @@ namespace oprForm
 				res.description = eventListGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
 		}
 
-	}
-
-	//class EventMapper : Mapper<Event>
-	//{
-	//	public Event Map(IDataReader reader)
-	//	{
-	//		var e = new Event();
-	//		e.id = reader.GetInt32(0);
-	//		e.name = reader.GetString(1);
-	//		e.description = reader.GetString(2);
-	//		e.actionCol = reader.GetString(3);
-
-	//		return e;
-	//	}
-	//}
-	class EventMapper 
-	{
-		public static Event Map(List<Object> row)
-		{
-			var e = new Event();
-			e.id = Int32.Parse(row[0].ToString());
-			e.name = row[1].ToString();
-			e.description = row[2].ToString();
-
-			return e;
-		}
-	}
-
-	class ResourceMapper 
-	{
-		public static Resource Map(List<Object> row)
-		{
-			var r = new Resource();
-			r.id = Int32.Parse(row[0].ToString());
-			r.name = row[1].ToString();
-			r.description = row[2].ToString();
-
-			return r;
-		}
-	}
-
-	class Event
-	{
-		public int id;
-		public string name;
-		public string description;
-
-		public override string ToString()
-		{
-			return id + " " + name + " " + description;
-		}
-	}
-	class Resource
-	{
-		public int id;
-		public string name;
-		public string description;
-		public int value;
-
-		public override string ToString()
-		{
-			return name;
-		}
 	}
 }						  
