@@ -99,7 +99,7 @@ CREATE TABLE `event` (
 
 LOCK TABLES `event` WRITE;
 /*!40000 ALTER TABLE `event` DISABLE KEYS */;
-INSERT INTO `event` VALUES (4,'Event Name','Description',1,NULL,NULL,NULL,NULL),(5,'Event Name','Description',2,NULL,NULL,NULL,NULL),(6,'Event Name','Description',2,NULL,NULL,NULL,NULL),(7,'new','Description',1,NULL,NULL,NULL,NULL),(8,'Event Name','Description',1,NULL,NULL,NULL,NULL),(9,'Event Name','Description',2,NULL,NULL,NULL,NULL);
+INSERT INTO `event` VALUES (4,'Event Name','Description',1,NULL,0,NULL,NULL),(5,'Event Name','Description',2,NULL,1,NULL,NULL),(6,'Event Name','Description',2,NULL,NULL,NULL,NULL),(7,'new','Description',1,NULL,1,NULL,NULL),(8,'Event Name','Description',1,NULL,0,NULL,NULL),(9,'Event Name','Description',2,NULL,0,NULL,NULL);
 /*!40000 ALTER TABLE `event` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -254,7 +254,7 @@ CREATE TABLE `formulas` (
   UNIQUE KEY `id_of_formula_UNIQUE` (`id_of_formula`),
   KEY `fk_formulas_expert_id_idx` (`id_of_expert`),
   CONSTRAINT `fk_formulas_expert_id` FOREIGN KEY (`id_of_expert`) REFERENCES `expert` (`id_of_expert`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -283,7 +283,7 @@ CREATE TABLE `issues` (
   PRIMARY KEY (`issue_id`),
   KEY `calc_series_id` (`calc_series_id`),
   CONSTRAINT `issues_ibfk_1` FOREIGN KEY (`calc_series_id`) REFERENCES `calculations_description` (`calculation_number`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -437,4 +437,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-23 20:23:08
+-- Dump completed on 2018-01-24 13:19:13
