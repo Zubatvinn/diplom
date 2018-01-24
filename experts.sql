@@ -278,7 +278,7 @@ CREATE TABLE `issues` (
   `issue_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
   `description` varchar(500) DEFAULT NULL,
-  `creation_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `creation_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `calc_series_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`issue_id`),
   KEY `calc_series_id` (`calc_series_id`),
@@ -292,7 +292,7 @@ CREATE TABLE `issues` (
 
 LOCK TABLES `issues` WRITE;
 /*!40000 ALTER TABLE `issues` DISABLE KEYS */;
-INSERT INTO `issues` VALUES (1,'Ploho','qwe','2018-01-23 15:59:30',NULL),(2,'Ochen Ploho','ewq','2018-01-23 15:59:30',NULL),(3,'Хорошо','все будет хорошо','2018-01-23 16:16:25',NULL),(4,'asdasd','asdasd','2018-01-23 16:21:28',NULL);
+INSERT INTO `issues` VALUES (1,'Ploho','qwe','2018-01-23 13:59:30',NULL),(2,'Ochen Ploho','ewq','2018-01-23 13:59:30',NULL),(3,'Хорошо','все будет хорошо','2018-01-23 14:16:25',NULL),(4,'asdasd','asdasd','2018-01-23 14:21:28',NULL);
 /*!40000 ALTER TABLE `issues` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -437,4 +437,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-24 13:19:13
+-- Dump completed on 2018-01-24 13:35:40
