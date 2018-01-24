@@ -297,13 +297,13 @@ INSERT INTO `issues` VALUES (1,'Ploho','qwe','2018-01-23 13:59:30',NULL),(2,'Och
 UNLOCK TABLES;
 
 --
--- Table structure for table `new_table`
+-- Table structure for table `event_documents`
 --
 
-DROP TABLE IF EXISTS `new_table`;
+DROP TABLE IF EXISTS `event_documents`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `new_table` (
+CREATE TABLE `event_documents` (
   `event_id` int(11) NOT NULL,
   `document_code` varchar(100) NOT NULL,
   `description` varchar(100) DEFAULT NULL,
@@ -313,12 +313,12 @@ CREATE TABLE `new_table` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `new_table`
+-- Dumping data for table `event_documents`
 --
 
-LOCK TABLES `new_table` WRITE;
-/*!40000 ALTER TABLE `new_table` DISABLE KEYS */;
-/*!40000 ALTER TABLE `new_table` ENABLE KEYS */;
+LOCK TABLES `event_documents` WRITE;
+/*!40000 ALTER TABLE `event_documents` DISABLE KEYS */;
+/*!40000 ALTER TABLE `event_documents` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
