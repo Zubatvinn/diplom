@@ -52,16 +52,49 @@
   <ItemGroup>
     <Compile Include="Calculations.cs" />
     <Compile Include="DBManager.cs" />
-    <Compile Include="Main.cs">
+    <Compile Include="Golovna.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="Golovna.Designer.cs">
+      <DependentUpon>Golovna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Redakt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Redakt.Designer.cs">
+      <DependentUpon>Redakt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result.Designer.cs">
+      <DependentUpon>Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rozrah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rozrah.Designer.cs">
+      <DependentUpon>Rozrah.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="UserLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLoginForm.Designer.cs">
+      <DependentUpon>UserLoginForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Golovna.resx">
+      <DependentUpon>Golovna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Redakt.resx">
+      <DependentUpon>Redakt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result.resx">
+      <DependentUpon>Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rozrah.resx">
+      <DependentUpon>Rozrah.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +106,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserLoginForm.resx">
+      <DependentUpon>UserLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
