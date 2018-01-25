@@ -49,6 +49,20 @@
   <ItemGroup>
     <Compile Include="DBManager.cs" />
     <Compile Include="DBUtil.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="Issue.cs" />
+    <Compile Include="IssuesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssuesForm.Designer.cs">
+      <DependentUpon>IssuesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LookEventsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LookEventsForm.Designer.cs">
+      <DependentUpon>LookEventsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +77,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.cs" />
+    <EmbeddedResource Include="IssuesForm.resx">
+      <DependentUpon>IssuesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookEventsForm.resx">
+      <DependentUpon>LookEventsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
