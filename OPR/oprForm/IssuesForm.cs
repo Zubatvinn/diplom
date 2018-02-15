@@ -14,47 +14,72 @@ namespace oprForm
 {
     public partial class IssuesForm : Form
     {
-		private DBManager db = new DBManager();
-		private String user = "Vasya";
+        private DBManager db = new DBManager();
+        private String user = "Vasya";
 
         public IssuesForm()
         {
             InitializeComponent();
- 			db.Connect();
-			var obj = db.GetRows("issues", "*", "");
-			var issues = new List<Issue>();
-			foreach(var row in obj)
-			{
-				issues.Add(IssueMapper.Map(row));
-			}
-				
+            RefreshIssues();
+        }
 
-			issuesLB.Items.AddRange(issues.ToArray());
-			db.Disconnect();
-       }
+        private void RefreshIssues()
+        {
+            issuesLB.Items.Clear();
+            db.Connect();
+            var obj = db.GetRows("issues", "*", "");
+            var issues = new List<Issue>();
+            foreach (var row in obj)
+            {
+                issues.Add(IssueMapper.Map(row));
+            }
+
+
+            issuesLB.Items.AddRange(issues.ToArray());
+            db.Disconnect();
+        }
 
         private void issuesLB_SelectedIndexChanged(object sender, EventArgs e)
         {
-			Issue issue = issuesLB.SelectedItem as Issue;
-            nameLbl.Text = issue.name;
-            descrLbl.Text = issue.description;
-            dateLbl.Text = issue.creationDate.ToString();
+            if (issuesLB.SelectedItem is Issue)
+            {
+                alterBtn.Visible = true;
+                Issue issue = issuesLB.SelectedItem as Issue;
+                nameLbl.Text = issue.name;
+                descrLbl.Text = issue.description;
+                dateLbl.Text = issue.creationDate.ToString();
+
+                //if (issue.seriesId.Length != 0)
+                //{
+                //    db.Connect();
+                //    var calc = db.GetValue("calculations_description", "calculation_name", "calculation_number=" + issue.seriesId);
+                //    seriesLbl.Text = calc.ToString();
+                //    db.Disconnect();
+                //}
+                //else
+                //{
+                //    seriesLbl.Text = "Без серii";
+                //}
+            }
         }
 
-        private void addBtn_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            db.Connect();
-            string[] fields = { "name", "description", "calc_series_id" };
-            
-            string calcSeries = seriesTB.Text.Length != 0 ? seriesTB.Text : "null";
-            string[] values = { DBUtil.AddQuotes(nameTB.Text), DBUtil.AddQuotes(descrTB.Text),  calcSeries};
+            var form = new AddIssueForm();
+            form.ShowDialog(this);
+            RefreshIssues();
+        }
 
-            int id = db.InsertToBD("issues", fields, values);
+        private void IssuesForm_Load(object sender, EventArgs e)
+        {
 
-            Issue issue = new Issue(id, nameTB.Text, descrTB.Text, DateTime.Now, calcSeries);
-            issuesLB.Items.Add(issue);
+        }
 
-            db.Disconnect();
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var form = new AlterIssueForm(issuesLB.SelectedItem as Issue);
+            form.ShowDialog(this);
+            RefreshIssues();
         }
     }
 }

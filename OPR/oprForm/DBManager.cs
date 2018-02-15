@@ -143,9 +143,35 @@ namespace Data
 				throw new ArgumentException("Field and Value list dont match.");
 			}
 		}
+
+		public void InsertToBDWithoutId(string table, string[] fieldNames, string[] fieldValues)
+		{
+			if (fieldNames.Length == fieldValues.Length)
+			{
+				string sqlCommand = "INSERT INTO " + table + "(";
+				for (int i = 0; i < fieldNames.Length - 1; i++)
+				{
+					sqlCommand += " " + fieldNames[i] + ",";
+				}
+				sqlCommand += fieldNames[fieldNames.Length - 1];
+				sqlCommand += ") VALUES(";
+				for (int i = 0; i < fieldValues.Length - 1; i++)
+				{
+					sqlCommand += " " + fieldValues[i] + ",";
+				}
+				sqlCommand += fieldValues[fieldNames.Length - 1];
+				sqlCommand += ");";
+				MySqlCommand insertCmd = new MySqlCommand(sqlCommand, connection);
+                insertCmd.ExecuteNonQuery();
+			}
+			else
+			{
+				throw new ArgumentException("Field and Value list dont match.");
+			}
+		}
 		//"INSERT INTO " + table + "(" + fieldNames[i] + "
 
-		public void UpdateRecord(string tableName, string[] colNames, string[] colValues)
+		public int UpdateRecord(string tableName, string[] colNames, string[] colValues)
 		{
 			if (colNames.Length == colValues.Length)
 			{
@@ -158,7 +184,7 @@ namespace Data
 				sqlCommand += colNames[colValues.Length - 1] + "=" + colValues[colValues.Length - 1] + "";
 				sqlCommand += " where " + colNames[0] + "=" + colValues[0] + "";
 				MySqlCommand insertCmd = new MySqlCommand(sqlCommand, connection);
-                insertCmd.ExecuteNonQuery();
+                return insertCmd.ExecuteNonQuery();
 			}
 			else
 			{

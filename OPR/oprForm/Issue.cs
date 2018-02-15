@@ -12,7 +12,6 @@ namespace Data.Entity
         public string name;
         public string description;
         public DateTime creationDate;
-        public string seriesId;
 
         public Issue(int id)
         {
@@ -24,7 +23,6 @@ namespace Data.Entity
             this.name = name;
             this.description = description;
             this.creationDate = creationDate;
-            this.seriesId = seriesId;
         }
 
         public override string ToString()
@@ -42,7 +40,6 @@ namespace Data.Entity
                 name = row[1].ToString(),
                 description = row[2].ToString(),
                 creationDate = DateTime.Parse(row[3].ToString()),
-                seriesId = row[4].ToString()
             };
 
             return i;

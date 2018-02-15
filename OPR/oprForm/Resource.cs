@@ -13,7 +13,19 @@ namespace Data.Entity
 		public string description;
 		public int value;
 
-		public override string ToString()
+        public override bool Equals(object obj)
+        {
+            var resource = obj as Resource;
+            return resource != null &&
+                   id == resource.id;
+        }
+
+        public override int GetHashCode()
+        {
+            return 1877310944 + id.GetHashCode();
+        }
+
+        public override string ToString()
 		{
 			return name;
 		}

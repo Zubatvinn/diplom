@@ -13,6 +13,8 @@ namespace Data.Entity
 		public string description;
         public string lawyerVer;
         public string dmVer;
+        public int userId;
+        public int issueId;
 
 		public override string ToString()
 		{
@@ -23,14 +25,19 @@ namespace Data.Entity
 	{
 		public static Event Map(List<Object> row)
 		{
-			var e = new Event();
-			e.id = Int32.Parse(row[0].ToString());
-			e.name = row[1].ToString();
-			e.description = row[2].ToString();
-            e.lawyerVer = row[3] != null? row[4].ToString(): null;
-            e.dmVer = row[4] != null? row[5].ToString(): null;
+            var e = new Event
+            {
+                id = Int32.Parse(row[0].ToString()),
+                name = row[1].ToString(),
+                description = row[2].ToString(),
+                // Template id
+                lawyerVer = row[4]?.ToString(),
+                dmVer = row[5]?.ToString(),
+                userId = row[6].ToString().Length != 0 ? Int32.Parse(row[6].ToString()) : -1,
+                issueId = row[7].ToString().Length != 0 ? Int32.Parse(row[7].ToString()) : -1
+            };
 
-			return e;
+            return e;
 		}
 	}
 
@@ -38,11 +45,13 @@ namespace Data.Entity
 	{
 		public static Event Map(List<Object> row)
 		{
-			var e = new Event();
-			e.id = Int32.Parse(row[0].ToString());
-			e.name = row[1].ToString();
-			e.description = row[2].ToString();
+            var e = new Event
+            {
+                id = Int32.Parse(row[0].ToString()),
+                name = row[1].ToString(),
+                description = row[2].ToString()
+            };
 
-			return e;
+            return e;
 		}
 	}}
