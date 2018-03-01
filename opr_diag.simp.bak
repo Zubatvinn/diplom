@@ -1,0 +1,1737 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="11.45" multi-file="no" uid="simp965d7940c6dc4d4b9d0312db16eb3184">
+  <meta>
+    <name>opr_diag</name>
+    <authors> </authors>
+    <description />
+  </meta>
+  <counters models="3">
+    <entity-names />
+    <entity-ids>
+      <counter>
+        <item-type type-id="package" type="UmlPackage" />
+        <value>7</value>
+      </counter>
+      <counter>
+        <item-type type-id="class" type="UmlClass" />
+        <value>27</value>
+      </counter>
+      <counter>
+        <item-type type-id="" type="AbstractElementGroup" />
+        <value>7</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlClassDiagram</type>
+        <value>7</value>
+      </counter>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlPackageDiagram</type>
+        <value>4</value>
+      </counter>
+    </diagrams>
+    <fields>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.AttributeField</type>
+        <value>239</value>
+      </counter>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.OperationField</type>
+        <value>251</value>
+      </counter>
+    </fields>
+  </counters>
+  <alias-groups />
+  <management uid="md-c119404a1db94d129a4cf066c22fc1e7" name="" task-id-sequence="0">
+    <working-schedule uid="ws-d09b4028769e4696945c059a4de7b5ca" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+    <persons>
+      <person id="P186ab7ac96a4484b9b5593b3180e9501">
+        <first-name />
+        <last-name />
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+        <working-schedule uid="ws-fa2b6ea9aad14753944d59bbbb49dc90" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+    </persons>
+    <teams />
+    <sprints />
+    <projects />
+    <modules />
+    <tasks />
+    <to-dos />
+  </management>
+  <glossary id="glsr-9f5d0bcc79364729a4b8a5bba15c468a" />
+  <types default="C#">
+    <type-sets>
+      <type-set file="CSharpTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <type id="DBManager" tid="" name="DBManager" description="" />
+      <type id="String" tid="" name="String" description="" />
+      <type id="IContainer" tid="" name="IContainer" description="" />
+      <type id="ListBox" tid="" name="ListBox" description="" />
+      <type id="Label" tid="" name="Label" description="" />
+      <type id="TextBox" tid="" name="TextBox" description="" />
+      <type id="Button" tid="" name="Button" description="" />
+      <type id="Void" tid="" name="Void" description="" />
+      <type id="Object" tid="" name="Object" description="" />
+      <type id="EventArgs" tid="" name="EventArgs" description="" />
+      <type id="Boolean" tid="" name="Boolean" description="" />
+      <type id="Int32" tid="" name="Int32" description="" />
+      <type id="DataGridView" tid="" name="DataGridView" description="" />
+      <type id="DataGridViewTextBoxColumn" tid="" name="DataGridViewTextBoxColumn" description="" />
+      <type id="DataGridViewCellEventArgs" tid="" name="DataGridViewCellEventArgs" description="" />
+      <type id="MenuStrip" tid="" name="MenuStrip" description="" />
+      <type id="ToolStripMenuItem" tid="" name="ToolStripMenuItem" description="" />
+      <type id="Class:di661405771184912526" tid="" name="Event" description="" class-ref="di661405771184912526" />
+      <type id="List`1" tid="" name="List`1" description="" />
+      <type id="Class:di400551100320960040" tid="" name="Issue" description="" class-ref="di400551100320960040" />
+      <type id="Class:di716487759250777521" tid="" name="Resource" description="" class-ref="di716487759250777521" />
+      <type id="MySqlConnection" tid="" name="MySqlConnection" description="" />
+      <type id="String[]" tid="" name="String[]" description="" />
+    </custom-types>
+  </types>
+  <items>
+    <item id="di925446981529211312" cid="PKG001" type="package" name="oprForm" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <associated-diagrams>
+        <diagram id="p6885695cbbc643bda68ab279137e616d_912406381" />
+      </associated-diagrams>
+      <style class="default" />
+    </item>
+    <item id="di201113247615590743" cid="C001" type="class" name="IssuesForm" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <style class="default" />
+      <attributes>
+        <attribute id="a72782240970342fea013b0ac0929a6b0258" cid="ELEM001" name="db" creation-date="01/01/0001 00:00:00" type="DBManager" type-id="DBManager" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ae284fda9c56a41fb8b673b1562036ab9261" cid="ELEM002" name="user" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aef6d7a19e13a407e8a45ed29ee26d69d261" cid="ELEM003" name="components" creation-date="01/01/0001 00:00:00" type="IContainer" type-id="IContainer" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a9a94b4aba8794781bb10ea1ac5dbfcdc261" cid="ELEM004" name="issuesLB" creation-date="01/01/0001 00:00:00" type="ListBox" type-id="ListBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a26ed00cc5d22495ba5c40f943cf99172261" cid="ELEM005" name="label1" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a510f2d623c5e41e5b99b1cd4947a1f0e261" cid="ELEM006" name="eventDescLabel" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a09043b5de4f14e519a43ef31ab09c747261" cid="ELEM007" name="label3" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a6323b73cf05a4183bdb514cc8c1996ff261" cid="ELEM008" name="descrLbl" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a07d0832f1f304f63a57f3e9cb70ba004261" cid="ELEM009" name="label4" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a7f9afc4f00ee41369bb3048352d7897b261" cid="ELEM010" name="label2" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aab6910db5514482c9ae47e552d9bfe50261" cid="ELEM011" name="nameLbl" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aac158745106848dfb8f1abfa7cc11730261" cid="ELEM012" name="dateLbl" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a21cce19768c54641adcaf2b185c2ecb4261" cid="ELEM013" name="label5" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aa7bfe837b02f46be9fc7ba8b0b29b5c3261" cid="ELEM014" name="label8" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a8af95dc4243b478e914df97aa4601c06261" cid="ELEM015" name="label7" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="af9bb172d3e744164ad0d33757d71adff261" cid="ELEM016" name="nameTB" creation-date="01/01/0001 00:00:00" type="TextBox" type-id="TextBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="af7bebe677f984196aec0f456d897bfe0261" cid="ELEM017" name="descrTB" creation-date="01/01/0001 00:00:00" type="TextBox" type-id="TextBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a79f7e09b768e4a7bb8cea36e011019af261" cid="ELEM018" name="addBtn" creation-date="01/01/0001 00:00:00" type="Button" type-id="Button" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a9b4289dab4e6484ab5ca3a69edde2ebe261" cid="ELEM019" name="seriesTB" creation-date="01/01/0001 00:00:00" type="TextBox" type-id="TextBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a3a03109888324c5bad4168427bc40ec4261" cid="ELEM020" name="label6" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="od041bb6ead4d41bf8809543dde22ba1b262" cid="ELEM021" name="issuesLB_SelectedIndexChanged" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p832c35e3cee94282afaf7f4b44227649" name="sender" type="Object" type-id="Object" />
+            <parameter id="pfa4a03a83eaa4b9f824b8eb6ced96fe6" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="od32286d5c3194c1c80371a52e1ba5933265" cid="ELEM022" name="addBtn_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p60feb0b7fed94e38a352b711c8b4f401" name="sender" type="Object" type-id="Object" />
+            <parameter id="pcaf5e7a128a7428980bde29ae4e079a4" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o180c363e80bf45d68514e22176ae7f48265" cid="ELEM023" name="Dispose" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="protected" virtual="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="p50bf9c50b405482d83513d280f67840a" name="disposing" type="Boolean" type-id="Boolean" />
+          </parameters>
+        </operation>
+        <operation id="o61186cf827314f7a997f4c4ab62b47c4265" cid="ELEM024" name="InitializeComponent" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di876652002354834421" cid="C002" type="class" name="LookEventsForm" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <style class="default" />
+      <attributes>
+        <attribute id="af2203c880ef04c55a9ea910fdd803af0284" cid="ELEM025" name="db" creation-date="01/01/0001 00:00:00" type="DBManager" type-id="DBManager" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aeb58ee2ffc0241fc8f7a7e1324ac2b1b284" cid="ELEM026" name="user" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a918690e088404d6bb0a8be7fc449728c284" cid="ELEM027" name="valueCol" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ae95d24bfe49644ae8ba62af9d853b388284" cid="ELEM028" name="descCol" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a7bb0683e28094bdcba5ef512e807701e284" cid="ELEM029" name="components" creation-date="01/01/0001 00:00:00" type="IContainer" type-id="IContainer" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a1c72affc101448099bd85fde1233281e284" cid="ELEM030" name="label2" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aeb70cd935ff74b2e86b17fedb185a514284" cid="ELEM031" name="eventListGrid" creation-date="01/01/0001 00:00:00" type="DataGridView" type-id="DataGridView" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a520ccfdaa7fb4cb0a82de62888e664be284" cid="ELEM032" name="Resource" creation-date="01/01/0001 00:00:00" type="DataGridViewTextBoxColumn" type-id="DataGridViewTextBoxColumn" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a0871b46981bd4f4b84a4123c5b0fb0cf284" cid="ELEM033" name="Description" creation-date="01/01/0001 00:00:00" type="DataGridViewTextBoxColumn" type-id="DataGridViewTextBoxColumn" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="abfda4c2d7ad14396bd650693ad004db5284" cid="ELEM034" name="Value" creation-date="01/01/0001 00:00:00" type="DataGridViewTextBoxColumn" type-id="DataGridViewTextBoxColumn" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a3627f099177c4e33b144e414d2800f70284" cid="ELEM035" name="label1" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a578822aefb784f9eae3b9dda57f4c552284" cid="ELEM036" name="eventsLB" creation-date="01/01/0001 00:00:00" type="ListBox" type-id="ListBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="adb3391b69cad4760b914b7ad6074a260284" cid="ELEM037" name="eventDescLabel" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a76afa49c146947dba872fe8c2e046c8f284" cid="ELEM038" name="label3" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a4d9baa25231343c2ac3520794d5cce57284" cid="ELEM039" name="approveBtn" creation-date="01/01/0001 00:00:00" type="Button" type-id="Button" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="afbc3a7dee2e54528befca5aa7f65d259284" cid="ELEM040" name="disaproveBtn" creation-date="01/01/0001 00:00:00" type="Button" type-id="Button" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a35bbe396eb5142f39a9cf4722d303876284" cid="ELEM041" name="label4" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a56ab0948a2cc496f8fa536118147de57284" cid="ELEM042" name="label5" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a334ce89002d54cef9651fd7b523f0f1b285" cid="ELEM043" name="dmApprLbl" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ae55a90a66f894ce5ab992ccde008811c285" cid="ELEM044" name="lawyerApprLbl" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="o1a074d398d3d4377bdf80d1b2edbb80b285" cid="ELEM045" name="LookEventsForm_Load" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p30a94b90849942d9acc86069d9348e30" name="sender" type="Object" type-id="Object" />
+            <parameter id="p26166de1be334699aa88499454164e4d" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o056266d4b1c84c9aab6e170bb9a5a730285" cid="ELEM046" name="eventsLB_SelectedIndexChanged" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p0bc53973dc0d40be8b1c170281e78f67" name="sender" type="Object" type-id="Object" />
+            <parameter id="pd47287997a71427ba99ed5a7a9d4949f" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o6003c9044ae34f479ceb9f9e388b4870285" cid="ELEM047" name="ukrBool" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pa290c7ae809d4a93ae94ed542a135a3f" name="str" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="o108486a766a94efd94be0e435631e317287" cid="ELEM048" name="eventDescLabel_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pdb837d49d6d0492cad6b0dc2e1ef1f21" name="sender" type="Object" type-id="Object" />
+            <parameter id="pfea40e248cf144e3856615a3c4ca1fe8" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="of0a7bf98f5ec4aa0952bdb0d1c241152287" cid="ELEM049" name="label2_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pad29dc3f76924e3d93cfb51c26317f4e" name="sender" type="Object" type-id="Object" />
+            <parameter id="p14a2961164bc4c0599d497726e62f254" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o96a4304db70a4da8a208bbc9d60e1a09287" cid="ELEM050" name="eventListGrid_CellContentClick" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pe7b095515572402ab474f2f88e603aad" name="sender" type="Object" type-id="Object" />
+            <parameter id="p110fbe2e2b8d414794a71055a27eb41a" name="e" type="DataGridViewCellEventArgs" type-id="DataGridViewCellEventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o84b78349bcba463ba60f6c26b9face52287" cid="ELEM051" name="label1_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p8338cf6eca5048d093158fa9803e9c47" name="sender" type="Object" type-id="Object" />
+            <parameter id="pfcfaa71f236c4b778752c6733a641c8b" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o20fce8d57e0a4b4ab60478e3da53fc46287" cid="ELEM052" name="label3_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p0a4e0932c2fc4e008187eb6d68cac211" name="sender" type="Object" type-id="Object" />
+            <parameter id="pdf5ad635834a4e8693d19b22dec06642" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="od106d105cc4b4a4daef078b886a5fa1a287" cid="ELEM053" name="approveBtn_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pb330b68f556c4c1d82952170a8b90899" name="sender" type="Object" type-id="Object" />
+            <parameter id="pebd54441d13245e2bdf0af3b31917492" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="od98287aa373b4575b9f2eb141d56235d287" cid="ELEM054" name="SetApproved" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p8311148c79ce4d8d94bab0d59cb4f0c4" name="approved" type="Boolean" type-id="Boolean" />
+          </parameters>
+        </operation>
+        <operation id="o4c38957bcce147e4aade9b50099b1a44287" cid="ELEM055" name="disaproveBtn_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p232b42e142334f8f858906314c36afdb" name="sender" type="Object" type-id="Object" />
+            <parameter id="pf4371a1357364dae95b8f0a502aec9d9" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o221882321ff14db4a26d5f451b85d18e287" cid="ELEM056" name="Dispose" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="protected" virtual="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="pc364d59500ef4542b7ea74b638ce9d55" name="disposing" type="Boolean" type-id="Boolean" />
+          </parameters>
+        </operation>
+        <operation id="oc16f93ebe8d341128f46bc27498595b1287" cid="ELEM057" name="InitializeComponent" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di371871965428037242" cid="C003" type="class" name="MainForm" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <style class="default" />
+      <attributes>
+        <attribute id="aea9abe3a1c7949fdaf596dc5e393c460288" cid="ELEM058" name="components" creation-date="01/01/0001 00:00:00" type="IContainer" type-id="IContainer" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a2e6020aaec20460493904c3d903470b7288" cid="ELEM059" name="menuStrip1" creation-date="01/01/0001 00:00:00" type="MenuStrip" type-id="MenuStrip" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a89dda82feff844fba45f127f8dd4db92288" cid="ELEM060" name="eventsToolStripMenuItem" creation-date="01/01/0001 00:00:00" type="ToolStripMenuItem" type-id="ToolStripMenuItem" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ab79a15830fa34b568d33a1c772aacaff288" cid="ELEM061" name="statsToolStripMenuItem" creation-date="01/01/0001 00:00:00" type="ToolStripMenuItem" type-id="ToolStripMenuItem" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a85ba6c31d93441589b6372ce70693fab288" cid="ELEM062" name="reportToolStripMenuItem" creation-date="01/01/0001 00:00:00" type="ToolStripMenuItem" type-id="ToolStripMenuItem" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a934973d424b543299c030f091f176913288" cid="ELEM063" name="переглядЗаходiвToolStripMenuItem" creation-date="01/01/0001 00:00:00" type="ToolStripMenuItem" type-id="ToolStripMenuItem" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a3e311614eaf54b33a6548f1d46d6c8a5288" cid="ELEM064" name="переглядПроблемToolStripMenuItem" creation-date="01/01/0001 00:00:00" type="ToolStripMenuItem" type-id="ToolStripMenuItem" visibility="private">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="o0b1a86e1183a4eabb6b622db63a04297288" cid="ELEM065" name="eventToolStripMenuItem_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pd674716027db413b99c315fcdb4757ef" name="sender" type="Object" type-id="Object" />
+            <parameter id="p05871e31112e4657b5a57de09bdd3a69" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="oa807ebba5c2c4ccbb3855671dd797f95288" cid="ELEM066" name="переглядЗаходiвToolStripMenuItem_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pf89d4a6f097048f59fa985c1fd54ba29" name="sender" type="Object" type-id="Object" />
+            <parameter id="pf16cf58015504a1cbf01ed053d9e0cba" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="ob468835e1a634280a824015b9f6bbf04288" cid="ELEM067" name="переглядПроблемToolStripMenuItem_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p37b3bf3cc93542a1a83364a3cad054cc" name="sender" type="Object" type-id="Object" />
+            <parameter id="pff5397a46aa74dab93f097ca51e5833d" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o5a23e0869bf74782a978acbeb2d90685288" cid="ELEM068" name="Dispose" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="protected" virtual="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="pa678c61b25b0410089669053bc08f957" name="disposing" type="Boolean" type-id="Boolean" />
+          </parameters>
+        </operation>
+        <operation id="oae6f35779a5e4c4db8f3ef5ee2a6fa55288" cid="ELEM069" name="InitializeComponent" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di514178673770348654" cid="C004" type="class" name="PlannedEventsForm" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <style class="default" />
+      <attributes>
+        <attribute id="a08f4a0e09011481d8fec7d0cecbefe7e289" cid="ELEM070" name="db" creation-date="01/01/0001 00:00:00" type="DBManager" type-id="DBManager" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a6df5d4c80fdb4fd38e5b98ccc66f511c289" cid="ELEM071" name="user" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aa8029c60109c4b599e38c694f5a6e11f289" cid="ELEM072" name="valueCol" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ab03c33c03fd545c9a324f8731d48599b289" cid="ELEM073" name="descCol" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a1a3d31e8192c4ad2b9ce4a8623cbb424289" cid="ELEM074" name="components" creation-date="01/01/0001 00:00:00" type="IContainer" type-id="IContainer" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a0d5e962545fc4bf29be3ad1dae6e457f289" cid="ELEM075" name="eventsLB" creation-date="01/01/0001 00:00:00" type="ListBox" type-id="ListBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aa14fb15ad4f744d7956987a0ebcd025c289" cid="ELEM076" name="label1" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aba2a6be175b54a8c8ed7f3d54d39eeb6289" cid="ELEM077" name="addBtn" creation-date="01/01/0001 00:00:00" type="Button" type-id="Button" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a51635f22daa8471eb14d232c3394888b289" cid="ELEM078" name="eventListGrid" creation-date="01/01/0001 00:00:00" type="DataGridView" type-id="DataGridView" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ae5dee878f2974505b808bd0da981f047289" cid="ELEM079" name="Resource" creation-date="01/01/0001 00:00:00" type="DataGridViewTextBoxColumn" type-id="DataGridViewTextBoxColumn" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="af1c311e866d64f5cab79c47680ed8e84289" cid="ELEM080" name="Description" creation-date="01/01/0001 00:00:00" type="DataGridViewTextBoxColumn" type-id="DataGridViewTextBoxColumn" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ac4219b06e05a410db71fbd49fec8620d289" cid="ELEM081" name="Value" creation-date="01/01/0001 00:00:00" type="DataGridViewTextBoxColumn" type-id="DataGridViewTextBoxColumn" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aefbda23a165f49f0ab4b80d111682453289" cid="ELEM082" name="descTB" creation-date="01/01/0001 00:00:00" type="TextBox" type-id="TextBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ad9c7a615055c462096cb7ecb5073b5f3289" cid="ELEM083" name="evNameTB" creation-date="01/01/0001 00:00:00" type="TextBox" type-id="TextBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a36c29ee418824d249b6bc45df12cfc1b289" cid="ELEM084" name="label2" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="oaf47aa9a85ce417e96cd5665d7ae4562289" cid="ELEM085" name="PlannedEventsForm_Load" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p317827121ff344578420da0bce809ff5" name="sender" type="Object" type-id="Object" />
+            <parameter id="p1b5e0be36bae45ceb2cc3f132f20919e" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o086b0d6502f64d0b99318187171baa45289" cid="ELEM086" name="button1_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p970c08513dac4fbfb9a18bf2e619f0dc" name="sender" type="Object" type-id="Object" />
+            <parameter id="pd3b7c88bb9c642e188ddb26dc29b4083" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o3e60bad6f07049d091e9d752a2b34092289" cid="ELEM087" name="eventsLB_SelectedIndexChanged" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p10104c154754418eb41a70209abb501d" name="sender" type="Object" type-id="Object" />
+            <parameter id="p9951537ac5a74f6a80c04e1e48ff39c7" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o989560ce676c4ba0867f01c81d713e1b289" cid="ELEM088" name="commitValue" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pea0b1c271fe44f96bbfc9a9f6125ee6e" name="sender" type="Object" type-id="Object" />
+            <parameter id="paed09a0ca4d64ec198cf8696d2873327" name="e" type="DataGridViewCellEventArgs" type-id="DataGridViewCellEventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o680a4d8f4f4b4227afec33f1051750d4289" cid="ELEM089" name="Dispose" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="protected" virtual="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="pfae2a3f729f94092b41ef34e127d22f6" name="disposing" type="Boolean" type-id="Boolean" />
+          </parameters>
+        </operation>
+        <operation id="obaa9ffa3982f43df8702d73496e0fb45289" cid="ELEM090" name="InitializeComponent" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di490354562102666005" cid="PKG002" type="package" name="Data" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <associated-diagrams>
+        <diagram id="p19466df2be544e5eb135b05971a3a0b3_400105904" />
+        <diagram id="p60adb843ddf14f1195d8f779734c5ecd_519478312" />
+      </associated-diagrams>
+      <style class="default" />
+    </item>
+    <item id="di360079178580699725" cid="PKG003" type="package" name="Entity" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <associated-diagrams>
+        <diagram id="p0084ef7c1deb42d997cddb8344643524_167071820" />
+      </associated-diagrams>
+      <style class="default" />
+    </item>
+    <item id="di661405771184912526" cid="C005" type="class" name="Event" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <style class="default" />
+      <attributes>
+        <attribute id="ad954c97641174870af384e42b6264b08295" cid="ELEM091" name="id" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a053267dc91e246169687ae7c770f86cc295" cid="ELEM092" name="name" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a50e67e4f2ee64c5abcc999cf0277845a295" cid="ELEM093" name="description" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a081a465e06a8489da7ce13bf0031c315295" cid="ELEM094" name="lawyerVer" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="aeecb536b89814ebe9880c44b372914bc295" cid="ELEM095" name="dmVer" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="o0679fc4f6f9a403780f3c7c071367526295" cid="ELEM096" name="ToString" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public" virtual="true">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di157770146293797571" cid="C006" type="class" name="EventMapper" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <style class="default" />
+      <operations>
+        <operation id="o7b70a3b6a1f9463688b772266c5a8baa295" cid="ELEM097" name="Map" creation-date="01/01/0001 00:00:00" type="Event" type-id="Class:di661405771184912526" visibility="public" static="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="p2d9ddc8ddb3646d3a47801a1d6f82728" name="row" type="List`1" type-id="List`1" />
+          </parameters>
+        </operation>
+      </operations>
+    </item>
+    <item id="di877976367383904552" cid="C007" type="class" name="EventTemplateMapper" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <style class="default" />
+      <operations>
+        <operation id="o2b3f735044544504aa6c0dd38cd2c137295" cid="ELEM098" name="Map" creation-date="01/01/0001 00:00:00" type="Event" type-id="Class:di661405771184912526" visibility="public" static="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="pfc89605cb7b94ad6a3a2ae21986594d8" name="row" type="List`1" type-id="List`1" />
+          </parameters>
+        </operation>
+      </operations>
+    </item>
+    <item id="di400551100320960040" cid="C008" type="class" name="Issue" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <style class="default" />
+      <attributes>
+        <attribute id="adde57c402d06464a9a11c1671956bd2d295" cid="ELEM099" name="id" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a54915fb103f14d8a93cacfd991cb90cb295" cid="ELEM100" name="name" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a4a7f5a73f90b4f77b656ac1ba583bb38295" cid="ELEM101" name="description" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="ac39fe2679c7c4bb1939187b2e9925138295" cid="ELEM102" name="creationDate" creation-date="01/01/0001 00:00:00" type="DateTime" type-id="CSharp.DateTime" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a781151fb94ca489ab9007364efafe6ea295" cid="ELEM103" name="seriesId" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="o7d13542027ab404f84952ca2b3ea9fbe295" cid="ELEM104" name="ToString" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public" virtual="true">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di473921307126270029" cid="C009" type="class" name="IssueMapper" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <style class="default" />
+      <operations>
+        <operation id="oc1c58d0308824d3784cd111adbc3c173295" cid="ELEM105" name="Map" creation-date="01/01/0001 00:00:00" type="Issue" type-id="Class:di400551100320960040" visibility="public" static="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="pc60b1a33902e4d15a31d04c40e56334f" name="row" type="List`1" type-id="List`1" />
+          </parameters>
+        </operation>
+      </operations>
+    </item>
+    <item id="di716487759250777521" cid="C010" type="class" name="Resource" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <style class="default" />
+      <attributes>
+        <attribute id="a39df35b674fb4121933ae734f8927baa295" cid="ELEM106" name="id" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a24246b6e777c4dafa12c72c6a134ae31295" cid="ELEM107" name="name" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="ab839bd72bb6d42ab9f7cac7bccae36d5295" cid="ELEM108" name="description" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a33c703c9ab1d45b3947c4d8500f8e5e5295" cid="ELEM109" name="value" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="public">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="o09bca7c3564d4a3fa1cddc16b2805e12295" cid="ELEM110" name="ToString" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public" virtual="true">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di524037771340818837" cid="C011" type="class" name="ResourceMapper" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <style class="default" />
+      <operations>
+        <operation id="ob48110df9c9a49198dce8f8d4f51dfe8295" cid="ELEM111" name="Map" creation-date="01/01/0001 00:00:00" type="Resource" type-id="Class:di716487759250777521" visibility="public" static="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="pb6eef6df19bb483385169512d91c6077" name="row" type="List`1" type-id="List`1" />
+          </parameters>
+        </operation>
+      </operations>
+    </item>
+    <item id="di142079066728412621" cid="C012" type="class" name="DBManager" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <style class="default" />
+      <attributes>
+        <attribute id="a3616497a4bf0435db0d673f89f4f4026297" cid="ELEM112" name="connection" creation-date="01/01/0001 00:00:00" type="MySqlConnection" type-id="MySqlConnection" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="abe4820b9739d4c16aad84b6fdd776471297" cid="ELEM113" name="connectionString" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="private">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="oefa6f25f7ddd4c0fb04bd257376f335c297" cid="ELEM114" name="Connect" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o22c3c6e6b8f443958e65f2f806775d34297" cid="ELEM115" name="Disconnect" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o55e0be17a3704e00b92b70d2a517adec297" cid="ELEM116" name="GetValue" creation-date="01/01/0001 00:00:00" type="Object" type-id="Object" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="p837d0adca691474db9ada87a504cba68" name="tableName" type="String" type-id="String" />
+            <parameter id="p12ed87436abf46168bac13a9e6efd59a" name="fields" type="String" type-id="String" />
+            <parameter id="pfb42bf0815794d2bb9262a926f92d834" name="cond" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="o1cc10aac641f43a89fa005d8f5c5c654297" cid="ELEM117" name="getSelectStatement" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p82f3c6ede8ce4c56b97b03230fe4b0c8" name="tableName" type="String" type-id="String" />
+            <parameter id="pb227e6805b7046929394fb5604191e53" name="fields" type="String" type-id="String" />
+            <parameter id="p79e7b7b6e3334371a7645836692543cd" name="cond" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="o7b9169233a0a4bfe92f1955b90aeb7e6297" cid="ELEM118" name="GetRows" creation-date="01/01/0001 00:00:00" type="List`1" type-id="List`1" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pb3aeab8f1d144080b01a92a9d02aaeb7" name="tableName" type="String" type-id="String" />
+            <parameter id="p7a9c51f597e7444687286b89115a13f7" name="fields" type="String" type-id="String" />
+            <parameter id="pedf8f9a0b9e94d728c37accc39cd5d49" name="cond" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="od32fbeb025fb454eb6f729a2a0d5c166297" cid="ELEM119" name="SetValue" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pd345742cac464580b938c91b29b1d182" name="tableName" type="String" type-id="String" />
+            <parameter id="pb92792fbf8784621ba7c752345f46faf" name="field" type="String" type-id="String" />
+            <parameter id="p15fe9ab967c24046a226054c7b088024" name="value" type="String" type-id="String" />
+            <parameter id="p1e60904235d04af48376f2fea5ab3bad" name="cond" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="oe6d0be0de9394888b6ea1bbf1613e6d1297" cid="ELEM120" name="getUpdateStatement" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p6e4b7c78fa0243e8bde4320131201502" name="tableName" type="String" type-id="String" />
+            <parameter id="p634f7af8d1074bff9e2f49e0de674761" name="field" type="String" type-id="String" />
+            <parameter id="pfcdc0169b90d4722b4d089501b4db725" name="value" type="String" type-id="String" />
+            <parameter id="pac3ca62f470541f28ed08378ecb20002" name="cond" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="o9d1ae45c6837436cb92ead1c9e1886fa297" cid="ELEM121" name="DeleteFromDB" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="p27206dd416514ae9956ebc4393b69dc9" name="table" type="String" type-id="String" />
+            <parameter id="p6739bfdaab4b4e198d5c0a7f47471264" name="colName" type="String" type-id="String" />
+            <parameter id="p84a46d280d4043789ac23a2377e27919" name="colValue" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="oc37a0d7367784de9b7e43ede9278ff80297" cid="ELEM122" name="InsertToBD" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="p86ba7099b44f4670902a2fb5516f194f" name="table" type="String" type-id="String" />
+            <parameter id="p687dcbc6f471439dbc755f72e7d59b14" name="list" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="oa3d88c9e52f044d39aeeb60a48a5a15c297" cid="ELEM123" name="InsertToBD" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pd53662638cfd49ac927081185c1fccdf" name="table" type="String" type-id="String" />
+            <parameter id="p9b111581cd894386b489e6383d793722" name="fieldNames" type="String[]" type-id="String[]" />
+            <parameter id="pc168302071564d44ba5be62624617f42" name="fieldValues" type="String[]" type-id="String[]" />
+          </parameters>
+        </operation>
+        <operation id="o6bd6788000fb4ad5b187245e48817363297" cid="ELEM124" name="UpdateRecord" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pd26873ac973a4ac882b26f2c747c0734" name="tableName" type="String" type-id="String" />
+            <parameter id="p3f47a83868e544aea1c93631d83dbbcd" name="colNames" type="String[]" type-id="String[]" />
+            <parameter id="pe6e0b1a0b654483d8d45b3973904aa43" name="colValues" type="String[]" type-id="String[]" />
+          </parameters>
+        </operation>
+      </operations>
+    </item>
+    <item id="di573266617412165658" cid="C013" type="class" name="DBUtil" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:45:52">
+      <style class="default" />
+      <operations>
+        <operation id="o63b2642b6d534320ba5e33eaf0e2287a298" cid="ELEM125" name="AddQuotes" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public" static="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="pf686010ff4974012800b5009c4d3c7d9" name="i" type="String" type-id="String" />
+          </parameters>
+        </operation>
+      </operations>
+    </item>
+    <item id="di656768651950707364" cid="PKG004" type="package" name="oprForm" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <associated-diagrams>
+        <diagram id="pb96ccb7db87740a193fcfc867595a4a5_150706016" />
+      </associated-diagrams>
+      <style class="default" />
+    </item>
+    <item id="di660480599227584959" cid="C014" type="class" name="IssuesForm" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <style class="default" />
+      <attributes>
+        <attribute id="a319d22ba56bb43078ef2c2859b76ef55290" cid="ELEM126" name="db" creation-date="01/01/0001 00:00:00" type="DBManager" type-id="DBManager" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a8fd5d57117264d509d6c83293af2732b290" cid="ELEM127" name="user" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ab103ba6c349a45348aedfa8d42fbc0d7290" cid="ELEM128" name="components" creation-date="01/01/0001 00:00:00" type="IContainer" type-id="IContainer" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a532053b656164d86bc7a3ac1a5e85164290" cid="ELEM129" name="issuesLB" creation-date="01/01/0001 00:00:00" type="ListBox" type-id="ListBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ad04ed23110c54e3ea63c2686dfee6830290" cid="ELEM130" name="label1" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aedf635e724b0433883c80cacc57da8af290" cid="ELEM131" name="eventDescLabel" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a5edb751d802645bc9ebd0017b956f2c0290" cid="ELEM132" name="label3" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a42b723dadbf84be29e0356a3b47a64b9290" cid="ELEM133" name="descrLbl" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a8b0d13f6143c42c68085a0c4cfe7fcfd290" cid="ELEM134" name="label4" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a6012ad1339b9496ea3071f31cc80f4e5290" cid="ELEM135" name="label2" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="af5eba9216210465bb5c3bba50cbf878f290" cid="ELEM136" name="nameLbl" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a4733da736c184311a8660fb94ee60e88290" cid="ELEM137" name="dateLbl" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="af9226db4bfc34b459a65ca372a24510c290" cid="ELEM138" name="label5" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a280152813071432197d86c1ee372a3c3290" cid="ELEM139" name="label8" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="acaf74b5e48ac49d3bf6d1565f8595c27290" cid="ELEM140" name="label7" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="adcb14e53e2144161bfabe53d904862dd290" cid="ELEM141" name="nameTB" creation-date="01/01/0001 00:00:00" type="TextBox" type-id="TextBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a018c7d0ee87c48ac8c5312c4e903c8cf290" cid="ELEM142" name="descrTB" creation-date="01/01/0001 00:00:00" type="TextBox" type-id="TextBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ab8e7fdc40e4d4b1fa31190c9bbcbecc5290" cid="ELEM143" name="addBtn" creation-date="01/01/0001 00:00:00" type="Button" type-id="Button" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ac9dddb182ad847829584360800a5152e290" cid="ELEM144" name="seriesTB" creation-date="01/01/0001 00:00:00" type="TextBox" type-id="TextBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a93e9afbf32144122b4ff00053bd40b18290" cid="ELEM145" name="label6" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="o8d4a56810f8a4a3d8e831ad6d276b6c3290" cid="ELEM146" name="issuesLB_SelectedIndexChanged" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p4b884b54f63844e69c157e69951f9a7a" name="sender" type="Object" type-id="Object" />
+            <parameter id="pd748071abaff477c98f3f67c14197bc0" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="ode815f0f591e49c182c85b72670c8fc3290" cid="ELEM147" name="addBtn_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pbb917f63423b40d896d9f7a24111d957" name="sender" type="Object" type-id="Object" />
+            <parameter id="paba24eda0add4eee967623cff8815ca3" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o573ae54cce2546be838315b0cf567028290" cid="ELEM148" name="Dispose" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="protected" virtual="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="p62237c553fdc49e6910fcdfe5983ce9a" name="disposing" type="Boolean" type-id="Boolean" />
+          </parameters>
+        </operation>
+        <operation id="o8568f1dfec7a491aa37a7166ee80083d290" cid="ELEM149" name="InitializeComponent" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di115187743388557529" cid="C015" type="class" name="LookEventsForm" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <style class="default" />
+      <attributes>
+        <attribute id="a4bc336d4ec134873b815d41dbcc1bb87291" cid="ELEM150" name="db" creation-date="01/01/0001 00:00:00" type="DBManager" type-id="DBManager" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a53115116210c4e33afb792f384bf408e291" cid="ELEM151" name="user" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="adc691feb96c243f3827d61081ff41052291" cid="ELEM152" name="valueCol" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="adaefb964316140b59eac9bc275c455e7291" cid="ELEM153" name="descCol" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ae52ae2f84de84cf2aeb96f46e00c7fe4291" cid="ELEM154" name="components" creation-date="01/01/0001 00:00:00" type="IContainer" type-id="IContainer" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a6f8ab1d16db14e588c32d85bc871d40d291" cid="ELEM155" name="label2" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a5a4f7a596f6948c9ba9579764e7c363f291" cid="ELEM156" name="eventListGrid" creation-date="01/01/0001 00:00:00" type="DataGridView" type-id="DataGridView" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a399c4be7957142dfad614fd1d6c0b151291" cid="ELEM157" name="Resource" creation-date="01/01/0001 00:00:00" type="DataGridViewTextBoxColumn" type-id="DataGridViewTextBoxColumn" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aa8c9422c27174530b2c06efde1f00bdd291" cid="ELEM158" name="Description" creation-date="01/01/0001 00:00:00" type="DataGridViewTextBoxColumn" type-id="DataGridViewTextBoxColumn" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a43f2a190da4942d28cbaaae639826f3d291" cid="ELEM159" name="Value" creation-date="01/01/0001 00:00:00" type="DataGridViewTextBoxColumn" type-id="DataGridViewTextBoxColumn" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a0184c36e20834473929de081e85ec4d8291" cid="ELEM160" name="label1" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ac95646e378954ee5b0bc8e199f08979a291" cid="ELEM161" name="eventsLB" creation-date="01/01/0001 00:00:00" type="ListBox" type-id="ListBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a0e1e27993e3e41608a4bf21fae13a979291" cid="ELEM162" name="eventDescLabel" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a93288dcc61e945ef910e19215d2c9b41291" cid="ELEM163" name="label3" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ae31730e85adf43f48f310111a372712f291" cid="ELEM164" name="approveBtn" creation-date="01/01/0001 00:00:00" type="Button" type-id="Button" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a9c799d5d539c4433ae3e2060c6e950ea291" cid="ELEM165" name="disaproveBtn" creation-date="01/01/0001 00:00:00" type="Button" type-id="Button" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a25438875af454134a2e531eeaeaad446291" cid="ELEM166" name="label4" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a9bd431b48ab942f6b6272d7a53f56edf291" cid="ELEM167" name="label5" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a4cd4260fc71d4821bf4163ac5bc9a39e291" cid="ELEM168" name="dmApprLbl" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a09e859b61c1e4b6ba13a74d7d1c6359b291" cid="ELEM169" name="lawyerApprLbl" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="odf328154ffdb4317b51767806882a2bc291" cid="ELEM170" name="LookEventsForm_Load" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pf11f00afb9114c0f89f5cec1bfe5bc08" name="sender" type="Object" type-id="Object" />
+            <parameter id="p7a880a1695ce45c4aa2654d38b093fea" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="ob606821e01dc433e84ed39bf41f91198291" cid="ELEM171" name="eventsLB_SelectedIndexChanged" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p1125f73554fd416fb2373e3a28dc7562" name="sender" type="Object" type-id="Object" />
+            <parameter id="paeca529c5e0c41b59cd5415a68c3af8a" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="oe843a5b946d046509d0753a9889f0eda291" cid="ELEM172" name="ukrBool" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p187947caca944265bdc40c9ae7be0675" name="str" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="oac7e1f36a167403e885e3973ee19571d291" cid="ELEM173" name="eventDescLabel_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pc2300c6816104ef7914af60787cee074" name="sender" type="Object" type-id="Object" />
+            <parameter id="p36ccd2392d744106a9b75144e17cd4c3" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o6c9fb21324a9468db7143676f7367b76291" cid="ELEM174" name="label2_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pb7bf8596bc684640a588ddb36423f1c7" name="sender" type="Object" type-id="Object" />
+            <parameter id="p8305c0d3b2204f708bac106be7f5a4cf" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o00458ecb2f08445eab91f5527a14c13b291" cid="ELEM175" name="eventListGrid_CellContentClick" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p6ae94b9cad1d4cf2b8beb0b7efeaba92" name="sender" type="Object" type-id="Object" />
+            <parameter id="pb121c09f9e9544eaa1521afba276d522" name="e" type="DataGridViewCellEventArgs" type-id="DataGridViewCellEventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o2635e65e943a4e8680cccc9619010cd2291" cid="ELEM176" name="label1_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pb81cf114c03a4830a77c15fa955e31e6" name="sender" type="Object" type-id="Object" />
+            <parameter id="p8f1d79d994804ddfb7fa8497b7c6048d" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o0f5a14f0d0c54471bf15cd5ea1675004291" cid="ELEM177" name="label3_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pbc5e12e6089f40f5a22fa977bca5d6fb" name="sender" type="Object" type-id="Object" />
+            <parameter id="p97c35a339a5d409f9ca50d68e4bcb243" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="ob246b6107bf5425fba3eb0d16faeda30291" cid="ELEM178" name="approveBtn_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p9d263cfb6700444c8ebc8c79c95a1ab8" name="sender" type="Object" type-id="Object" />
+            <parameter id="p212c116cc0b14fb69b7b0c338a3ac17e" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o36a246ffbaa34195843669b9d4b59b5e291" cid="ELEM179" name="SetApproved" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p4650f3a2e4c7436baf1978e871882ec7" name="approved" type="Boolean" type-id="Boolean" />
+          </parameters>
+        </operation>
+        <operation id="obef9d25a36714f01a0e43173e11dce80291" cid="ELEM180" name="disaproveBtn_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p38f79d23eccc4bfbaa1017379e386267" name="sender" type="Object" type-id="Object" />
+            <parameter id="p36fe5ebe603c4291bb524976d0e2536b" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o61f2a2e8fc484cf18a3b2fa5be6f4c46291" cid="ELEM181" name="Dispose" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="protected" virtual="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="p83fc9e9b6cab4c18bf6c4f661ef65370" name="disposing" type="Boolean" type-id="Boolean" />
+          </parameters>
+        </operation>
+        <operation id="o77936a66fae546df92fbe35775270ebc291" cid="ELEM182" name="InitializeComponent" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di634735265489599323" cid="C016" type="class" name="MainForm" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <style class="default" />
+      <attributes>
+        <attribute id="a9ae76faffbf24bb49a71aa6ce3628cbc293" cid="ELEM183" name="components" creation-date="01/01/0001 00:00:00" type="IContainer" type-id="IContainer" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a5b0d2eb755364d1a828d54a23192bb37293" cid="ELEM184" name="menuStrip1" creation-date="01/01/0001 00:00:00" type="MenuStrip" type-id="MenuStrip" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a9b88ec2e8d814aa087b4f0cc46edfd47293" cid="ELEM185" name="eventsToolStripMenuItem" creation-date="01/01/0001 00:00:00" type="ToolStripMenuItem" type-id="ToolStripMenuItem" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a3499ba3a039142f188176f7748ceeac6293" cid="ELEM186" name="statsToolStripMenuItem" creation-date="01/01/0001 00:00:00" type="ToolStripMenuItem" type-id="ToolStripMenuItem" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a70b6f7eb966f4dbe8640446451bd9c8a293" cid="ELEM187" name="reportToolStripMenuItem" creation-date="01/01/0001 00:00:00" type="ToolStripMenuItem" type-id="ToolStripMenuItem" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aa0bca048c36845d1b0de88b3d6d2bec8293" cid="ELEM188" name="переглядЗаходiвToolStripMenuItem" creation-date="01/01/0001 00:00:00" type="ToolStripMenuItem" type-id="ToolStripMenuItem" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a7274323312f54583a1f5cc86e7921947293" cid="ELEM189" name="переглядПроблемToolStripMenuItem" creation-date="01/01/0001 00:00:00" type="ToolStripMenuItem" type-id="ToolStripMenuItem" visibility="private">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="o0ebd58690c694024a67726fb72673819293" cid="ELEM190" name="eventToolStripMenuItem_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p0bf9d15f599a4a63b1890af2d72e0365" name="sender" type="Object" type-id="Object" />
+            <parameter id="pd77a878bd47541fcb34050e710c887e0" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o8afaf839a8964084880993e7f85e9076293" cid="ELEM191" name="переглядЗаходiвToolStripMenuItem_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p031724fe92794a9cb1c1800b2cb53850" name="sender" type="Object" type-id="Object" />
+            <parameter id="p26753327178849f091d5fad6f61484fd" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o680e4b444bf94a0fb5602f0e518da512293" cid="ELEM192" name="переглядПроблемToolStripMenuItem_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pa71c9d7804f042888014008436140c46" name="sender" type="Object" type-id="Object" />
+            <parameter id="p57e7203871f74fe5bd188273d0832b66" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o4e83a30d2862473e951fde42fef8cbce293" cid="ELEM193" name="Dispose" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="protected" virtual="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="p9d662647f3f644e8b26c9d08cdb77c36" name="disposing" type="Boolean" type-id="Boolean" />
+          </parameters>
+        </operation>
+        <operation id="o322ed979ded848b287a890c4a1d0b6e3293" cid="ELEM194" name="InitializeComponent" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di790962015122423565" cid="C017" type="class" name="PlannedEventsForm" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <style class="default" />
+      <attributes>
+        <attribute id="ac1dcd2264908402180806e3ddb71210a294" cid="ELEM195" name="db" creation-date="01/01/0001 00:00:00" type="DBManager" type-id="DBManager" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a20e24fcec9b14a60bb85cf56b8700053294" cid="ELEM196" name="user" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="abc71660f9b5248ecae8eb945cb2886f8294" cid="ELEM197" name="valueCol" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aecf7cf7d5e1448e7b7d94dc1560b0397294" cid="ELEM198" name="descCol" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ac98329ad829e41bbaf7f13cc1fdf7a02294" cid="ELEM199" name="components" creation-date="01/01/0001 00:00:00" type="IContainer" type-id="IContainer" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="adad6df59f5ab4350a36fca8e17cfb9c7294" cid="ELEM200" name="eventsLB" creation-date="01/01/0001 00:00:00" type="ListBox" type-id="ListBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="afc894e3e79a94b20a6dd361b0642cc4a294" cid="ELEM201" name="label1" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="afbbc228e28a148159a8f93825d59fc2c294" cid="ELEM202" name="addBtn" creation-date="01/01/0001 00:00:00" type="Button" type-id="Button" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a75f22fd79ea9494b8a658b63ff8cb260294" cid="ELEM203" name="eventListGrid" creation-date="01/01/0001 00:00:00" type="DataGridView" type-id="DataGridView" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="af0d0cf51d73b4c68b63472fb2169aa07294" cid="ELEM204" name="Resource" creation-date="01/01/0001 00:00:00" type="DataGridViewTextBoxColumn" type-id="DataGridViewTextBoxColumn" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aef910428b9974968b39c0fe74a4ed207294" cid="ELEM205" name="Description" creation-date="01/01/0001 00:00:00" type="DataGridViewTextBoxColumn" type-id="DataGridViewTextBoxColumn" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a14b2ca17af5d441b93478e79c44a4438294" cid="ELEM206" name="Value" creation-date="01/01/0001 00:00:00" type="DataGridViewTextBoxColumn" type-id="DataGridViewTextBoxColumn" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a546d7fb04b7942bbbdc710a60a30643b294" cid="ELEM207" name="descTB" creation-date="01/01/0001 00:00:00" type="TextBox" type-id="TextBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="aaa20413afab0477dad0a66a6be47ddc7294" cid="ELEM208" name="evNameTB" creation-date="01/01/0001 00:00:00" type="TextBox" type-id="TextBox" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="ab791043690fe41baac3786a9c3fdbed6294" cid="ELEM209" name="label2" creation-date="01/01/0001 00:00:00" type="Label" type-id="Label" visibility="private">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="ob94e2293de9248c183f65269efbfb9e7294" cid="ELEM210" name="PlannedEventsForm_Load" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p25351f7876c644698a4293ee2fe75a45" name="sender" type="Object" type-id="Object" />
+            <parameter id="pc2d6f427ae3242d2945dfd8c60457e71" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o8b99853fd4694ec7b87f68a7c7cb378a294" cid="ELEM211" name="button1_Click" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p0a9d0e5213c1453ab759089fe6e845b9" name="sender" type="Object" type-id="Object" />
+            <parameter id="p42f93c7aab7c464380c0521026f9f3c1" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o61bae069eee5414a9353498d305156a2294" cid="ELEM212" name="eventsLB_SelectedIndexChanged" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p3d3142a068004f7aac2558f542fca347" name="sender" type="Object" type-id="Object" />
+            <parameter id="pe1fbab11f856487db5e099dc55bcac17" name="e" type="EventArgs" type-id="EventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o1920e661ad8849d49a0780b38d62b99f294" cid="ELEM213" name="commitValue" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p083f64bbf1fc423397c7dea6c629808d" name="sender" type="Object" type-id="Object" />
+            <parameter id="p134cb9eed7704d4ba676642efc5810c8" name="e" type="DataGridViewCellEventArgs" type-id="DataGridViewCellEventArgs" />
+          </parameters>
+        </operation>
+        <operation id="o28614940462f45cfad589274c419b776294" cid="ELEM214" name="Dispose" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="protected" virtual="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="p52a28d051d7c4f7abdd61c8189bdf2b3" name="disposing" type="Boolean" type-id="Boolean" />
+          </parameters>
+        </operation>
+        <operation id="o090318abbc024eaca7706c428a3d29d0294" cid="ELEM215" name="InitializeComponent" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="private">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di979693175675935457" cid="PKG005" type="package" name="Data" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <associated-diagrams>
+        <diagram id="p38858e932115409891412839c4920233_760781909" />
+        <diagram id="pcd794b4f57184793bea922df0d3ab0ff_342772668" />
+      </associated-diagrams>
+      <style class="default" />
+    </item>
+    <item id="di825907661601163159" cid="PKG006" type="package" name="Entity" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <associated-diagrams>
+        <diagram id="p2a2fd81ac04749abb9e37cdfcb09b134_938572284" />
+      </associated-diagrams>
+      <style class="default" />
+    </item>
+    <item id="di316582396372685945" cid="C018" type="class" name="Event" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <style class="default" />
+      <attributes>
+        <attribute id="a9b6de152ba6745fe8640c5332bbdd175298" cid="ELEM216" name="id" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a6de83faa731c45d58636c5715deab29a298" cid="ELEM217" name="name" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a7eac68eb736a4b03b683045f86e8153c298" cid="ELEM218" name="description" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="aa45edf1f85a24144a6313dd35ce066a0298" cid="ELEM219" name="lawyerVer" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a8ced9c66530e4987a864c09504517a00298" cid="ELEM220" name="dmVer" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="oe20ed39ec27f4300a6118fce1914b3b6298" cid="ELEM221" name="ToString" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public" virtual="true">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di786751710513854724" cid="C019" type="class" name="EventMapper" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <style class="default" />
+      <operations>
+        <operation id="o0aa0123ad68e4388838507c0370eed0b298" cid="ELEM222" name="Map" creation-date="01/01/0001 00:00:00" type="Event" type-id="Class:di661405771184912526" visibility="public" static="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="p4adb3c8979e6413096305a20008af820" name="row" type="List`1" type-id="List`1" />
+          </parameters>
+        </operation>
+      </operations>
+    </item>
+    <item id="di772482501932439370" cid="C020" type="class" name="EventTemplateMapper" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <style class="default" />
+      <operations>
+        <operation id="oaf5b3fcbc3514ebcb3ca1d77b33f033d298" cid="ELEM223" name="Map" creation-date="01/01/0001 00:00:00" type="Event" type-id="Class:di661405771184912526" visibility="public" static="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="pcbec19d016f5453aa04766a514383128" name="row" type="List`1" type-id="List`1" />
+          </parameters>
+        </operation>
+      </operations>
+    </item>
+    <item id="di718501727383000970" cid="C021" type="class" name="Issue" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <style class="default" />
+      <attributes>
+        <attribute id="a51b6c82ac971494c81fe1c426e98c1a9298" cid="ELEM224" name="id" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="abbbcac852fa14362a2219054a1748f8a298" cid="ELEM225" name="name" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a0f0b017ea07a40bd865ddb2d2e9fedb9298" cid="ELEM226" name="description" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="acdf0c207822b4bfbb2d53e47f91c841d298" cid="ELEM227" name="creationDate" creation-date="01/01/0001 00:00:00" type="DateTime" type-id="CSharp.DateTime" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a705ee911b9634935978b1fb45c5e3cae298" cid="ELEM228" name="seriesId" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="oc8c6862daec54e5aad0b9ed5107f3c14298" cid="ELEM229" name="ToString" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public" virtual="true">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di679760376571435071" cid="C022" type="class" name="IssueMapper" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <style class="default" />
+      <operations>
+        <operation id="o20efd440025c437caa49552fbe73ef87298" cid="ELEM230" name="Map" creation-date="01/01/0001 00:00:00" type="Issue" type-id="Class:di400551100320960040" visibility="public" static="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="pf975dc704a434389b40a0d86993ceb39" name="row" type="List`1" type-id="List`1" />
+          </parameters>
+        </operation>
+      </operations>
+    </item>
+    <item id="di730948024663031760" cid="C023" type="class" name="Resource" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <style class="default" />
+      <attributes>
+        <attribute id="a615f48b82d7b4586a3f095034a52444a298" cid="ELEM231" name="id" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a79eccfbbc3864d74aeac4de085e07ab9298" cid="ELEM232" name="name" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="a98ff8f24f37746759228b539f1ef53d1298" cid="ELEM233" name="description" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public">
+          <style class="default" />
+        </attribute>
+        <attribute id="ad9494ea7f009462b9a705b6fd14c771a298" cid="ELEM234" name="value" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="public">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="od1d2faffa29e43e6bf3b4725f5836210298" cid="ELEM235" name="ToString" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public" virtual="true">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di794409550299781838" cid="C024" type="class" name="ResourceMapper" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <style class="default" />
+      <operations>
+        <operation id="o63efc7d82fde4387b454ed8dc5821f1c299" cid="ELEM236" name="Map" creation-date="01/01/0001 00:00:00" type="Resource" type-id="Class:di716487759250777521" visibility="public" static="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="pd432863cd2d041da98b6b270e84986ea" name="row" type="List`1" type-id="List`1" />
+          </parameters>
+        </operation>
+      </operations>
+    </item>
+    <item id="di257318925584593608" cid="C025" type="class" name="DBManager" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <style class="default" />
+      <attributes>
+        <attribute id="ac2a047a597c9482c9a013f6e6af11389299" cid="ELEM237" name="connection" creation-date="01/01/0001 00:00:00" type="MySqlConnection" type-id="MySqlConnection" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a093cebf3a932484892e5b57f388bdd3b299" cid="ELEM238" name="connectionString" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="private">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="o34916840c48b43afae2469db86d245a3299" cid="ELEM239" name="Connect" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o18e4f07d7c4f4bf3b21802c0850a5419299" cid="ELEM240" name="Disconnect" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o2fbef74603374a3cac588fc7eb2611f2299" cid="ELEM241" name="GetValue" creation-date="01/01/0001 00:00:00" type="Object" type-id="Object" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pf608e06c57f24cd193f5eabd1efbbcfe" name="tableName" type="String" type-id="String" />
+            <parameter id="pce76e80224d44cc6a210cbd703a298c2" name="fields" type="String" type-id="String" />
+            <parameter id="p3e09278975c547aabe1539ff0e628b63" name="cond" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="of49804c4a2a241a6932008018f2678de299" cid="ELEM242" name="getSelectStatement" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="pd7d2a3bdd4b1425cb2ca1c8b594ee3fc" name="tableName" type="String" type-id="String" />
+            <parameter id="p492f44cea4a74a55b064d360b2901155" name="fields" type="String" type-id="String" />
+            <parameter id="p83591bfd4c3b468886f45cd851ad32ad" name="cond" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="o8352c26f6b764d92ac7f713dfda281cc299" cid="ELEM243" name="GetRows" creation-date="01/01/0001 00:00:00" type="List`1" type-id="List`1" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="p21b185fdfff74eeda7efcecffe4232ea" name="tableName" type="String" type-id="String" />
+            <parameter id="pf18cfa13f53943ae92c6946f3e37b410" name="fields" type="String" type-id="String" />
+            <parameter id="pe0d9c4637c51418b91d8059029cbfe47" name="cond" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="oeb11d8a461754616968f51ed94e587e2299" cid="ELEM244" name="SetValue" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pd0291f7595de422b99051cc71cf37aeb" name="tableName" type="String" type-id="String" />
+            <parameter id="p7902205babd14874b068f523c7562845" name="field" type="String" type-id="String" />
+            <parameter id="pd690e8fa6a174b2c90320218d82aaef2" name="value" type="String" type-id="String" />
+            <parameter id="pd100b718b9c84b91a07d27d18b9e0638" name="cond" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="of2fa29cdc7964e6ba670e0fc1891daba299" cid="ELEM245" name="getUpdateStatement" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p4f9cce6a93ea4fb0a307a54975d271c7" name="tableName" type="String" type-id="String" />
+            <parameter id="pa2373052b8c7495d8f2e5b8ac6912c48" name="field" type="String" type-id="String" />
+            <parameter id="p47814314fa844e08adaf568f7b298e1f" name="value" type="String" type-id="String" />
+            <parameter id="p44182bbcd2ff4cf0a73d5c6275ae18e0" name="cond" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="oc95d1dd6befd4e4d9c24260ca420ca83299" cid="ELEM246" name="DeleteFromDB" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pd4d69ba94f704e5f978b1dcc60d495fe" name="table" type="String" type-id="String" />
+            <parameter id="pac4ef7f9ab334dea97adf0e03aa3bafb" name="colName" type="String" type-id="String" />
+            <parameter id="pb43166b98db74f6daee6381f5bc50eb1" name="colValue" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="o145f06aeba6c4c4d9f69f921dde7ad33299" cid="ELEM247" name="InsertToBD" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="p8aa09a9f28b44688baaec439d6f7b3f8" name="table" type="String" type-id="String" />
+            <parameter id="p47ac3736904e4c00ab7a303640cdd1b6" name="list" type="String" type-id="String" />
+          </parameters>
+        </operation>
+        <operation id="o50a31aa0fc784c718cb20cfce48ff72e299" cid="ELEM248" name="InsertToBD" creation-date="01/01/0001 00:00:00" type="Int32" type-id="Int32" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pb89d144ab933424e91142e781a214461" name="table" type="String" type-id="String" />
+            <parameter id="p5c9030c1da0345848e24c4e651d3a655" name="fieldNames" type="String[]" type-id="String[]" />
+            <parameter id="p7df92b16e8164e459eca7e60f8e51843" name="fieldValues" type="String[]" type-id="String[]" />
+          </parameters>
+        </operation>
+        <operation id="ocd59abd1b0484c7292e9e496d6ec00dd299" cid="ELEM249" name="UpdateRecord" creation-date="01/01/0001 00:00:00" type="Void" type-id="Void" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pa8f9003ec9094b85b4eea44bd70ef8bd" name="tableName" type="String" type-id="String" />
+            <parameter id="pa8690b6856f04843bb22d09e7b3df78d" name="colNames" type="String[]" type-id="String[]" />
+            <parameter id="p76651772de724edc9e7499ef5ff5f52c" name="colValues" type="String[]" type-id="String[]" />
+          </parameters>
+        </operation>
+      </operations>
+    </item>
+    <item id="di956945054719674393" cid="C026" type="class" name="DBUtil" style-class="" visibility="package" creator="P186ab7ac96a4484b9b5593b3180e9501" creation-date="01/24/2018 13:46:12">
+      <style class="default" />
+      <operations>
+        <operation id="o11900c55cff24533b3dbc895d67d77b7300" cid="ELEM250" name="AddQuotes" creation-date="01/01/0001 00:00:00" type="String" type-id="String" visibility="public" static="true">
+          <style class="default" />
+          <parameters>
+            <parameter id="p9c8e20544ac84ceaa2ad6f003dac26e0" name="i" type="String" type-id="String" />
+          </parameters>
+        </operation>
+      </operations>
+    </item>
+  </items>
+  <models>
+    <model id="p02dc2e3ee7a940c5bbd06464f9db6270_569270207" name="Model1" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>01/24/2018 13:42:31</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-class" id="p195a0c12d07e4a2c92b91b4d436b3330_809105644" name="ClassDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>01/24/2018 13:42:31</creation-date>
+          <change-date>01/24/2018 13:42:31</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items />
+        <layer id="66af7745a39d419cbf11e036ece5cf2d" name="Default" visible="true" enabled="true" locked="false" />
+      </diagram>
+    </model>
+    <model id="p03c71eaa65ff4f1d8f2c30423d16c484_942178494" name="Model2" namespace="" order-index="2">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>01/24/2018 13:45:52</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-package" id="p57197442f98e4d99a013d6a1648df937_340197287" name="Global" order-index="5" overview-order-index="3" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="vertical-linear" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>01/24/2018 13:45:52</creation-date>
+          <change-date>01/24/2018 13:45:52</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items />
+        <layer id="af45ac8b22a544e9980af0fa99922253" name="Default" visible="true" enabled="true" locked="false">
+          <item id="di925446981529211312" iid="6c10da9a15d245b69e1ce25126ebd287" name-style="" creation-date="01/24/2018 13:45:52" order-index="0" type="entity">
+            <layout ax="0" ay="0" awidth="300" aheight="200" x="0" y="0" width="300" height="200" />
+          </item>
+          <item id="di490354562102666005" iid="28f0cada12754f41ba6f35280857854b" name-style="" creation-date="01/24/2018 13:45:52" order-index="1" type="entity">
+            <layout ax="310" ay="0" awidth="300" aheight="200" x="310" y="0" width="300" height="200" />
+          </item>
+        </layer>
+      </diagram>
+      <diagram type="uml-package" id="p19466df2be544e5eb135b05971a3a0b3_400105904" name="Data" order-index="3" overview-order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="vertical-linear" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>01/24/2018 13:45:52</creation-date>
+          <change-date>01/24/2018 13:45:52</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items />
+        <layer id="e2d3f041836c4af5841c501723d90789" name="Default" visible="true" enabled="true" locked="false">
+          <item id="di360079178580699725" iid="4b423772dfea410687f07ff5145a0bfc" name-style="" creation-date="01/24/2018 13:45:52" order-index="0" type="entity">
+            <layout ax="0" ay="0" awidth="300" aheight="200" x="0" y="0" width="300" height="200" />
+          </item>
+        </layer>
+      </diagram>
+      <diagram type="uml-class" id="p60adb843ddf14f1195d8f779734c5ecd_519478312" name="ClassDiagram4" order-index="4" overview-order-index="2" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="vertical-linear" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>01/24/2018 13:45:52</creation-date>
+          <change-date>01/24/2018 13:45:52</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items />
+        <layer id="6e34ccc92f264ec0af595dae19c9af73" name="Default" visible="true" enabled="true" locked="false">
+          <item id="di142079066728412621" iid="862cb24f93cd440f8df26928b7bd19b9" name-style="" creation-date="01/24/2018 13:45:52" order-index="0" type="entity">
+            <layout ax="0" ay="0" awidth="140" aheight="160" x="0" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di573266617412165658" iid="dd1d7fadfc5445cd92965b86d1f19ae9" name-style="" creation-date="01/24/2018 13:45:52" order-index="1" type="entity">
+            <layout ax="150" ay="0" awidth="140" aheight="160" x="150" y="0" width="140" height="160" />
+            <class />
+          </item>
+        </layer>
+      </diagram>
+      <diagram type="uml-class" id="p6885695cbbc643bda68ab279137e616d_912406381" name="ClassDiagram2" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="vertical-linear" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>01/24/2018 13:45:52</creation-date>
+          <change-date>01/24/2018 13:45:52</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items />
+        <layer id="bfcaf8ab48a64fefa6718f4e9f5c2118" name="Default" visible="true" enabled="true" locked="false">
+          <item id="di201113247615590743" iid="1a8144664bd341278c2dbb9e8fc72bc4" name-style="" creation-date="01/24/2018 13:45:52" order-index="0" type="entity">
+            <layout ax="0" ay="0" awidth="140" aheight="160" x="0" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di876652002354834421" iid="0ee4f341630945858ecac70457e156b0" name-style="" creation-date="01/24/2018 13:45:52" order-index="1" type="entity">
+            <layout ax="150" ay="0" awidth="140" aheight="160" x="150" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di371871965428037242" iid="0875ceb982bc4afabd330d68caaf7e52" name-style="" creation-date="01/24/2018 13:45:52" order-index="2" type="entity">
+            <layout ax="300" ay="0" awidth="140" aheight="160" x="300" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di514178673770348654" iid="40571539be194ac1ac4fc9d4eaa10d21" name-style="" creation-date="01/24/2018 13:45:52" order-index="3" type="entity">
+            <layout ax="450" ay="0" awidth="140" aheight="160" x="450" y="0" width="140" height="160" />
+            <class />
+          </item>
+        </layer>
+      </diagram>
+      <diagram type="uml-class" id="p0084ef7c1deb42d997cddb8344643524_167071820" name="ClassDiagram3" order-index="2" overview-order-index="0" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="vertical-linear" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>01/24/2018 13:45:52</creation-date>
+          <change-date>01/24/2018 13:45:52</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items />
+        <layer id="725b6d2c50894046a935f3013fc1e2ba" name="Default" visible="true" enabled="true" locked="false">
+          <item id="di661405771184912526" iid="fc6a8f3dbbd74cdd8c4705f59ffd4f3d" name-style="" creation-date="01/24/2018 13:45:52" order-index="0" type="entity">
+            <layout ax="0" ay="0" awidth="140" aheight="160" x="0" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di157770146293797571" iid="92eebce95e854284a84c0c4c89cf44a6" name-style="" creation-date="01/24/2018 13:45:52" order-index="1" type="entity">
+            <layout ax="150" ay="0" awidth="140" aheight="160" x="150" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di877976367383904552" iid="2a267c60dd0e46f5a321fb1da4110a57" name-style="" creation-date="01/24/2018 13:45:52" order-index="2" type="entity">
+            <layout ax="300" ay="0" awidth="140" aheight="160" x="300" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di400551100320960040" iid="a9e02863c4454fc093fca4510ff55c95" name-style="" creation-date="01/24/2018 13:45:52" order-index="3" type="entity">
+            <layout ax="450" ay="0" awidth="140" aheight="160" x="450" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di473921307126270029" iid="940d1817b5bf4be08499e4291d45d8f4" name-style="" creation-date="01/24/2018 13:45:52" order-index="4" type="entity">
+            <layout ax="600" ay="0" awidth="140" aheight="160" x="600" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di716487759250777521" iid="53aa50eea3344234ac49eb8c0d9f2c07" name-style="" creation-date="01/24/2018 13:45:52" order-index="5" type="entity">
+            <layout ax="750" ay="0" awidth="140" aheight="160" x="750" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di524037771340818837" iid="911ca479b69b4a549781e90f8c5dd1eb" name-style="" creation-date="01/24/2018 13:45:52" order-index="6" type="entity">
+            <layout ax="0" ay="170" awidth="140" aheight="160" x="0" y="170" width="140" height="160" />
+            <class />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+    <model id="p6ac2167a2ac34711a80c5e80fcbea0da_424019615" name="Model3" namespace="" order-index="3" expanded="true">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>01/24/2018 13:46:12</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-package" id="p36b4e3b99ff34fc7b769a21512dff32c_725733935" name="Global" order-index="5" overview-order-index="3" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="vertical-linear" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>01/24/2018 13:46:12</creation-date>
+          <change-date>01/24/2018 13:46:12</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items />
+        <layer id="d2349df883324e76a351c8d64968ec40" name="Default" visible="true" enabled="true" locked="false">
+          <item id="di656768651950707364" iid="52ac91150d454aadb670855f54e21397" name-style="" creation-date="01/24/2018 13:46:12" order-index="0" type="entity">
+            <layout ax="0" ay="0" awidth="300" aheight="200" x="0" y="0" width="300" height="200" />
+          </item>
+          <item id="di979693175675935457" iid="ab9dd5ba8fca4bc9b92e4d061c2659ed" name-style="" creation-date="01/24/2018 13:46:12" order-index="1" type="entity">
+            <layout ax="310" ay="0" awidth="300" aheight="200" x="310" y="0" width="300" height="200" />
+          </item>
+        </layer>
+      </diagram>
+      <diagram type="uml-package" id="p38858e932115409891412839c4920233_760781909" name="Data" order-index="3" expanded="true" overview-order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="vertical-linear" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>01/24/2018 13:46:12</creation-date>
+          <change-date>01/24/2018 13:46:12</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items />
+        <layer id="104e16d18b5b438392138faf9f90b34b" name="Default" visible="true" enabled="true" locked="false">
+          <item id="di825907661601163159" iid="0f42b737fda04a63be254e0d9b3b8bec" name-style="" creation-date="01/24/2018 13:46:12" order-index="0" type="entity">
+            <layout ax="0" ay="0" awidth="300" aheight="200" x="0" y="0" width="300" height="200" />
+          </item>
+        </layer>
+      </diagram>
+      <diagram type="uml-class" id="pcd794b4f57184793bea922df0d3ab0ff_342772668" name="ClassDiagram7" order-index="4" expanded="true" overview-order-index="2" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="vertical-linear" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>01/24/2018 13:46:12</creation-date>
+          <change-date>01/24/2018 13:46:12</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items />
+        <layer id="41cfbeac4cff4324aee95e20c16f973e" name="Default" visible="true" enabled="true" locked="false">
+          <item id="di257318925584593608" iid="aba5d5b1d9b94c5fa2fb76d251b27536" name-style="" creation-date="01/24/2018 13:46:12" order-index="0" type="entity">
+            <layout ax="0" ay="0" awidth="140" aheight="160" x="0" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di956945054719674393" iid="e701483f09a14f28ad561e0123f3cc35" name-style="" creation-date="01/24/2018 13:46:12" order-index="1" type="entity">
+            <layout ax="150" ay="0" awidth="140" aheight="160" x="150" y="0" width="140" height="160" />
+            <class />
+          </item>
+        </layer>
+      </diagram>
+      <diagram type="uml-class" id="pb96ccb7db87740a193fcfc867595a4a5_150706016" name="ClassDiagram5" order-index="1" expanded="true" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="vertical-linear" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>01/24/2018 13:46:12</creation-date>
+          <change-date>01/24/2018 13:46:12</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items />
+        <layer id="a056fa8551db4b78b9a1459569cf0262" name="Default" visible="true" enabled="true" locked="false">
+          <item id="di660480599227584959" iid="5661abf6c8cd4299ae77b49486c85d23" name-style="" creation-date="01/24/2018 13:46:12" order-index="0" type="entity">
+            <layout ax="0" ay="0" awidth="140" aheight="160" x="0" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di115187743388557529" iid="460d4a60f7924ff18248c936dba2a301" name-style="" creation-date="01/24/2018 13:46:12" order-index="1" type="entity">
+            <layout ax="150" ay="0" awidth="140" aheight="160" x="150" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di634735265489599323" iid="12d11fbb6f5e442e945b8cceabf13e69" name-style="" creation-date="01/24/2018 13:46:12" order-index="2" type="entity">
+            <layout ax="300" ay="0" awidth="140" aheight="160" x="300" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di790962015122423565" iid="d00f5168fffd4e46a457cdd5bea99054" name-style="" creation-date="01/24/2018 13:46:12" order-index="3" type="entity">
+            <layout ax="450" ay="0" awidth="140" aheight="160" x="450" y="0" width="140" height="160" />
+            <class />
+          </item>
+        </layer>
+      </diagram>
+      <diagram type="uml-class" id="p2a2fd81ac04749abb9e37cdfcb09b134_938572284" name="ClassDiagram6" order-index="2" overview-order-index="0" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="vertical-linear" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>01/24/2018 13:46:12</creation-date>
+          <change-date>01/24/2018 13:46:12</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items />
+        <layer id="c3f59047e0954dc9b959933db4f22969" name="Default" visible="true" enabled="true" locked="false">
+          <item id="di316582396372685945" iid="39b7d48fe3de4e1888d76c55bdf10be3" name-style="" creation-date="01/24/2018 13:46:12" order-index="0" type="entity">
+            <layout ax="0" ay="0" awidth="140" aheight="160" x="0" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di786751710513854724" iid="2bc21456b84c4486a7a913924445ef62" name-style="" creation-date="01/24/2018 13:46:12" order-index="1" type="entity">
+            <layout ax="150" ay="0" awidth="140" aheight="160" x="150" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di772482501932439370" iid="5845bed22e1842ed80ff63df233410c7" name-style="" creation-date="01/24/2018 13:46:12" order-index="2" type="entity">
+            <layout ax="300" ay="0" awidth="140" aheight="160" x="300" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di718501727383000970" iid="e8596305690940d4a6103ad6c3e10228" name-style="" creation-date="01/24/2018 13:46:12" order-index="3" type="entity">
+            <layout ax="450" ay="0" awidth="140" aheight="160" x="450" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di679760376571435071" iid="e674c6db580243e68b142e9f6f4c0fa6" name-style="" creation-date="01/24/2018 13:46:12" order-index="4" type="entity">
+            <layout ax="600" ay="0" awidth="140" aheight="160" x="600" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di730948024663031760" iid="ef58af743b0140e3bc284483fa7d62dc" name-style="" creation-date="01/24/2018 13:46:12" order-index="5" type="entity">
+            <layout ax="750" ay="0" awidth="140" aheight="160" x="750" y="0" width="140" height="160" />
+            <class />
+          </item>
+          <item id="di794409550299781838" iid="23715b030339486da51763be99c1033a" name-style="" creation-date="01/24/2018 13:46:12" order-index="6" type="entity">
+            <layout ax="0" ay="170" awidth="140" aheight="160" x="0" y="170" width="140" height="160" />
+            <class />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+</sim-project>
