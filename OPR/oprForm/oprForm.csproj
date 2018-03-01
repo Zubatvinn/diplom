@@ -77,9 +77,22 @@
     <Compile Include="AlterIssueForm.Designer.cs">
       <DependentUpon>AlterIssueForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlterTemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlterTemplateForm.Designer.cs">
+      <DependentUpon>AlterTemplateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CalculationSeries.cs" />
     <Compile Include="DBManager.cs" />
     <Compile Include="DBUtil.cs" />
+    <Compile Include="Document.cs" />
+    <Compile Include="DocumentViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocumentViewForm.Designer.cs">
+      <DependentUpon>DocumentViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Event.cs" />
     <Compile Include="Issue.cs" />
     <Compile Include="IssuesForm.cs">
@@ -136,6 +149,12 @@
     <EmbeddedResource Include="AlterIssueForm.resx">
       <DependentUpon>AlterIssueForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AlterTemplateForm.resx">
+      <DependentUpon>AlterTemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentViewForm.resx">
+      <DependentUpon>DocumentViewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IssuesForm.resx">
       <DependentUpon>IssuesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +194,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FileBase\FileBase.csproj">
+      <Project>{a0e906cb-f24d-40a3-9d04-8648c896aa54}</Project>
+      <Name>FileBase</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

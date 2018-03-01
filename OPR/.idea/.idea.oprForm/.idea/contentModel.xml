@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Zigmundovich Albert\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_oprForm.-838756304.00" t="ExcludeRecursive" />
+    <e p="D:\PROG\eco\oprForm\OPR" t="IncludeFlat">
+      <e p="oprForm" t="IncludeRecursive">
+        <e p="AddIssueForm.cs" t="Include" />
+        <e p="AddIssueForm.Designer.cs" t="Include" />
+        <e p="AddIssueForm.resx" t="Include" />
+        <e p="AddMaterialForm.cs" t="Include" />
+        <e p="AddMaterialForm.Designer.cs" t="Include" />
+        <e p="AddMaterialForm.resx" t="Include" />
+        <e p="AddTemplateForm.cs" t="Include" />
+        <e p="AddTemplateForm.Designer.cs" t="Include" />
+        <e p="AddTemplateForm.resx" t="Include" />
+        <e p="AlterIssueForm.cs" t="Include" />
+        <e p="AlterIssueForm.Designer.cs" t="Include" />
+        <e p="AlterIssueForm.resx" t="Include" />
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CalculationSeries.cs" t="Include" />
+        <e p="DBManager.cs" t="Include" />
+        <e p="DBUtil.cs" t="Include" />
+        <e p="Event.cs" t="Include" />
+        <e p="Issue.cs" t="Include" />
+        <e p="IssuesForm.cs" t="Include" />
+        <e p="IssuesForm.Designer.cs" t="Include" />
+        <e p="IssuesForm.resx" t="Include" />
+        <e p="LookEventsForm.cs" t="Include" />
+        <e p="LookEventsForm.Designer.cs" t="Include" />
+        <e p="LookEventsForm.resx" t="Include" />
+        <e p="MainForm.cs" t="Include" />
+        <e p="MainForm.Designer.cs" t="Include" />
+        <e p="MainForm.resx" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="oprForm.csproj" t="IncludeRecursive" />
+        <e p="PlannedEventsForm.cs" t="Include" />
+        <e p="PlannedEventsForm.Designer.cs" t="Include" />
+        <e p="PlannedEventsForm.resx" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Resource.cs" t="Include" />
+        <e p="ResourcesForm.cs" t="Include" />
+        <e p="ResourcesForm.Designer.cs" t="Include" />
+        <e p="ResourcesForm.resx" t="Include" />
+      </e>
+      <e p="oprForm.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

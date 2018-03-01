@@ -36,6 +36,7 @@
             this.переглядЗаходiвToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.eventsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.змiнитиШаблонToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +47,8 @@
             this.шаблониToolStripMenuItem,
             this.переглядПроблемToolStripMenuItem,
             this.ресурсиToolStripMenuItem,
-            this.заходиToolStripMenuItem});
+            this.заходиToolStripMenuItem,
+            this.змiнитиШаблонToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
@@ -106,6 +108,13 @@
             this.eventsToolStripMenuItem.Text = "Новий захiд";
             this.eventsToolStripMenuItem.Click += new System.EventHandler(this.eventsToolStripMenuItem_Click);
             // 
+            // змiнитиШаблонToolStripMenuItem
+            // 
+            this.змiнитиШаблонToolStripMenuItem.Name = "змiнитиШаблонToolStripMenuItem";
+            this.змiнитиШаблонToolStripMenuItem.Size = new System.Drawing.Size(159, 29);
+            this.змiнитиШаблонToolStripMenuItem.Text = "Змiнити Шаблон";
+            this.змiнитиШаблонToolStripMenuItem.Click += new System.EventHandler(this.змiнитиШаблонToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -134,6 +143,7 @@
         private System.Windows.Forms.ToolStripMenuItem переглядЗаходiвToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem eventsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem змiнитиШаблонToolStripMenuItem;
     }
 }
 

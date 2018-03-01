@@ -12,9 +12,11 @@ namespace oprForm
 {
 	public partial class MainForm : Form
 	{
-		public MainForm()
+        int expertId;
+		public MainForm(int expertId)
 		{
 			InitializeComponent();
+            this.expertId = expertId;
 		}
 
 		private void eventToolStripMenuItem_Click(object sender, EventArgs e)
@@ -83,6 +85,13 @@ namespace oprForm
         private void eventsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 			PlannedEventsForm child = new PlannedEventsForm();
+			child.MdiParent = this;
+			child.Show();
+        }
+
+        private void змiнитиШаблонToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			var child = new AlterTemplateForm();
 			child.MdiParent = this;
 			child.Show();
         }
